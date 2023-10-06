@@ -1,0 +1,232 @@
+body {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 40px;
+    background-color: #f9f9f9;
+}
+
+#header-image {
+    /*position: absolute;*/
+    /*left: 0;*/
+    width: 40px; /* adjust this value according to the desired size of your header image */
+    height: 40px; /* this will maintain the aspect ratio of your image */
+    z-index: 1; /* ensure the image stays above other elements */
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+
+#header {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+#dashboard {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    vertical-align: middle;
+    padding: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#dashboard div {
+    /*width: 100%;*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#virtualKeyboard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border: 2px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+#virtualKeyboard div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#virtualKeyboard button {
+    flex-grow: 1;
+    height: 40px;
+    margin: 2px;
+    border: none;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#virtualKeyboard button:hover {
+    background-color: #d4d4d4;
+}
+
+#virtualKeyboard button:active {
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+#userInput {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 20px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* For smaller screens */
+@media (max-width: 600px) {
+    body {
+        margin: 20px;
+    }
+
+    #virtualKeyboard button {
+        height: 35px;
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #userInput {
+        width: 90%;
+    }
+}
+
+#virtualKeyboard button.backspace {
+    flex-grow: 1;
+}
+button.listen {
+    background-color: #00FF7B; /* Primary blue color */
+    color: black;
+    padding: 10px 15px;
+    border: none;
+
+    border: none;
+    background-color: #e6e6e6;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button.listen:hover {
+    background-color: #00b356; /* Darker blue color */
+    transform: translateY(-2px);
+}
+
+/* Active (Clicked) State for the Listen Button */
+button.listen:active {
+    transform: translateY(0);             /* Reset elevation to default when pressed */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12); /* Slightly decrease shadow for a pressed effect */
+}
+
+
+button.listen:hover {
+    /*background-color: #0056b3;*/ /* Darker blue color */
+    background-color: rgba(0, 123, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+button.listen:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Flash Card Styles */
+.flashcard {
+    width: 200px;
+    height: 120px;
+    perspective: 1000px;
+    margin: 20px auto;
+    cursor: pointer;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+.flashcard:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.card-back {
+    background-color: white;
+    transform: rotateY(180deg);
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Word List Styles */
+ul#wordList {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+ul#wordList li {
+    margin-bottom: 8px;
+    color: #555;
+}
+.currentWord {
+    background: white;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+    /*background: lightpink;*/
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Bee</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <img id="header-image" src="bee200.png" width="40" height="40"/>
+        <h2>Spelling Bee</h2>
+    </div>
+
+    <div id="dashboard">
+        <div style="flex-grow:1">
+            <p>Word List:</p>
+            <ul id="wordList"></ul>
+        </div>
+        <div style="flex-grow:3">
+            <!-- <p>Current Word: <span id="currentWordNumber">1</span> of <span id="totalWords"></span></p> -->
+
+            <div class="flashcard">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <p>Reveal the word!</p>
+                    </div>
+                    <div class="card-back">
+                        <p id="animalWord">ANIMAL</p>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <button class="listen" onclick="speakWord()" title="Listen to the word">&#x1F50A; Listen</button>
+        </div>
+    </div>
+
+    <input type="text" id="userInput" readonly>
+    <p id="feedback"></p>
+    <div id="virtualKeyboard"></div>   
+
+    <script src="spelling_flashcards.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>
