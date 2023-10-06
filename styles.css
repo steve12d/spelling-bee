@@ -8,6 +8,7 @@ body {
 #header-image {
     /*position: absolute;*/
     /*left: 0;*/
+    padding: 25px;
     width: 40px; /* adjust this value according to the desired size of your header image */
     height: 40px; /* this will maintain the aspect ratio of your image */
     z-index: 1; /* ensure the image stays above other elements */
