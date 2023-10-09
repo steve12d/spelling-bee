@@ -231,3 +231,24 @@ ul#wordList li {
     
     /*background: lightpink;*/
 }
+.phrase {
+    font-size: smaller;
+}
+
+#preferences {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+#answer-correct-img {
+    display: none;
+    width: 200px;  /* or any preferred size */
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%); /* Center the dinosaur horizontally */
+    z-index: 1000; /* Make sure it appears above other content */
+}

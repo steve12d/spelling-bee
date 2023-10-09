@@ -1,17 +1,38 @@
 let currentWordIndex = 0;
 
-let quizwords = ["high","sigh","right","night","fight","they","he"];
+let quizwords = [
+    "high",
+    "sigh",
+    "right",
+    "night",
+    "fight",
+    "they",
+    "he"
+];
+let phrases = [
+    "I can jump so high.",
+    "She let out a sigh.",
+    "After the stop sign, turn right.",
+    "I love looking at the stars at night.",
+    "I caught the fish, but he put up a big fight.",
+    "They are ready to go to the mall",
+    "He is my father"
+]
 
 let currentQuizWord;
 
-function displayAnimal() {
+function displayCard() {
     if (currentWordIndex >= quizwords.length) {
         currentWordIndex = 0;  // Reset if we've gone through all the quizwords
     }
     
     currentQuizWord = quizwords[currentWordIndex];
     let wordDisplay = document.getElementById("animalWord");
-    wordDisplay.textContent = currentQuizWord;
+    /*wordDisplay.textContent = currentQuizWord;*/
+    wordDisplay.innerHTML = `
+        <p>${currentQuizWord}</p>
+        <p class="phrase">${phrases[currentWordIndex]}</p>
+    `;
     
     //document.getElementById("currentWordNumber").textContent = currentWordIndex + 1;
     //Refresh word list
@@ -21,7 +42,7 @@ function displayAnimal() {
 function displayNext() {
     currentWordIndex+=1;
     document.getElementById("userInput").value="";
-    displayAnimal();
+    displayCard();
 }
 
 function displayWordList() {
@@ -56,6 +77,14 @@ function checkAnswer() {
         let audio = new Audio('trumpet.mp3');
         audio.play();
         
+        // Show the chosen image
+        document.getElementById('answer-correct-img').style.display = 'block';
+        
+        // Hide the image after a short while (e.g., 3 seconds)
+        setTimeout(() => {
+            document.getElementById('answer-correct-img').style.display = 'none';
+        }, 3000);
+ 
         // Throw confetti
         confetti({
             particleCount: 100,
@@ -63,6 +92,13 @@ function checkAnswer() {
             startVelocity: 40,
             ticks: 200
         });
+
+        // Say "Good job" if username is defined
+        if ('speechSynthesis' in window && document.getElementById('username').value ) {
+            let phrase = new SpeechSynthesisUtterance("Good job, " + document.getElementById('username').value);
+            phrase.lang = "en-US";
+            window.speechSynthesis.speak(phrase);
+        }    
         
         setTimeout(displayNext, 3000); // Show new animal after 3 seconds to let the user enjoy the celebration.
     } else {
@@ -101,10 +137,14 @@ function highlightCorrectness() {
     }
 }
 
-function speakWord() {
+function speakWord(lang = "en-US") {
     if ('speechSynthesis' in window) {
-        let utterance = new SpeechSynthesisUtterance(currentQuizWord);
-        window.speechSynthesis.speak(utterance);
+        let utterance_word = new SpeechSynthesisUtterance(currentQuizWord);
+        let utterance_phrase = new SpeechSynthesisUtterance(phrases[currentWordIndex]);
+        utterance_word.lang = lang;
+        utterance_phrase.lang = lang;
+        window.speechSynthesis.speak(utterance_word);
+        setTimeout(()=>window.speechSynthesis.speak(utterance_phrase),1000);
     } else {
         alert("Your browser does not support speech synthesis. Try using a modern browser like Chrome or Firefox.");
     }
@@ -153,12 +193,36 @@ function createVirtualKeyboard() {
     backspaceButton.classList.add("backspace");
 }
 
-/*createVirtualKeyboard();
-displayAnimal();*/
+
+function savePreferences() {
+    const username = document.getElementById('username').value;
+    const correctImg = document.getElementById('correctImg').value;
+
+    localStorage.setItem('username', username);
+    localStorage.setItem('correctImg', correctImg);
+}
+
+function loadPreferences() {
+    const username = localStorage.getItem('username');
+    const correctImg = localStorage.getItem('correctImg');
+
+    if (username) {
+        document.getElementById('username').value = username;
+    }
+
+    if (correctImg) {
+        document.getElementById('correctImg').value = correctImg;
+        document.getElementById('answer-correct-img').src = correctImg; // Set the image source
+    }
+}
+
+// Call loadPreferences() when the page loads
+document.addEventListener('DOMContentLoaded', loadPreferences);
+
 
 // Call the above functions after the page has loaded
 window.onload = function() {
     displayWordList();
-    displayAnimal();
+    displayCard();
     createVirtualKeyboard();
 }

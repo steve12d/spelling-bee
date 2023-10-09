@@ -25,6 +25,18 @@
         <img id="header-image" src="bee200.png" width="40" height="40"/>
         <h2>Spelling Bee</h2>
     </div>
+    <div id="preferences">
+        <label for="username">Name: </label>
+        <input type="text" id="username">
+        <label for="correctImg">Image on Correct Answer: </label>
+        <select id="correctImg">
+            <option value="dancing-t-rex.gif">Dancing T-Rex</option>
+            <option value="velociraptors.gif">Velociraptors</option>
+            <option value="peppa-george.gif">Peppa and George</option>
+            <!-- Add more options as needed -->
+        </select>
+        <button onclick="savePreferences()">Save</button>
+    </div> 
 
     <div id="dashboard">
         <div style="flex-grow:1">
@@ -38,6 +50,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <p>Reveal the word!</p>
+                        <img src="dancing-t-rex.gif" id="answer-correct-img" alt="Correct Answer Image" style="display: none;">
                     </div>
                     <div class="card-back">
                         <p id="animalWord">ANIMAL</p>
@@ -45,7 +58,9 @@
                 </div>
             </div>
             <br/>
-            <button class="listen" onclick="speakWord()" title="Listen to the word">&#x1F50A; Listen</button>
+            
+            <button class="listen" onclick="speakWord('en-US')" title="Listen to the word">&#x1F50A; 🇺🇸</button>
+            <button class="listen" onclick="speakWord('en-GB')" title="Listen to the word">&#x1F50A; 🇬🇧</button>
         </div>
     </div>
 
