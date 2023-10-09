@@ -1,6 +1,10 @@
 let currentWordIndex = 0;
 
-let quizwords = ["high","sigh","right","night","fight","they","he"];
+let past_words = {
+    202340: ["high","sigh","right","night","fight","they","he"]
+}
+
+let quizwords = ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"];
 
 let currentQuizWord;
 
@@ -32,6 +36,7 @@ function displayWordList() {
         let listItem = document.createElement("li");
         if(index==currentWordIndex) listItem.classList.add("currentWord");
         listItem.textContent = obscureWord(animal, index);
+        listItem.setAttribute('title', animal);
         wordListElement.appendChild(listItem);
     });
 
@@ -104,6 +109,7 @@ function highlightCorrectness() {
 function speakWord() {
     if ('speechSynthesis' in window) {
         let utterance = new SpeechSynthesisUtterance(currentQuizWord);
+        utterance.lang="en-US";
         window.speechSynthesis.speak(utterance);
     } else {
         alert("Your browser does not support speech synthesis. Try using a modern browser like Chrome or Firefox.");
@@ -156,9 +162,22 @@ function createVirtualKeyboard() {
 /*createVirtualKeyboard();
 displayAnimal();*/
 
+
 // Call the above functions after the page has loaded
 window.onload = function() {
     displayWordList();
     displayAnimal();
-    createVirtualKeyboard();
+    createVirtualKeyboard();   
 }
+
+document.addEventListener('keydown', function(event) {
+    const keyPressed = event.key.toLowerCase();
+
+    // If the key pressed is a letter
+    if (keyPressed === 'backspace') {
+        // If the Backspace key is pressed, remove the last letter
+        applyBackspace();
+    } else if (keyPressed >= 'a' && keyPressed <= 'z') {
+            updateInputValue(keyPressed);
+    }
+});
