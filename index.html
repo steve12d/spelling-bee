@@ -25,8 +25,8 @@
         <img id="header-image" src="bee200.png" width="40" height="40"/>
         <h2>Spelling Bee</h2>
     </div>
-
-    <div id="dashboard">
+    
+    <div id="dashboard" class="dashboard">
         <div style="flex-grow:1">
             <p>Word List:</p>
             <ul id="wordList"></ul>
@@ -38,17 +38,41 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <p>Reveal the word!</p>
+                        <img src="dancing-t-rex.gif" id="answer-correct-img" alt="Correct Answer Image" style="display: none;">
                     </div>
                     <div class="card-back">
-                        <p id="animalWord">ANIMAL</p>
+                        <p id="cardWord"></p>
                     </div>
                 </div>
             </div>
             <br/>
-            <button class="listen" onclick="speakWord()" title="Listen to the word">&#x1F50A; Listen</button>
+            
+            <button class="listen" onclick="speakWord('en-US')" title="Listen to the word">&#x1F50A; Listen</button>
+            <!-- <button class="listen" onclick="speakWord('en-GB')" title="Listen to the word">&#x1F50A; 🇬🇧</button> -->    
         </div>
+        <!-- <div>
+            <button class="toggleButton" onclick="toggleSettings()">
+                <span>&#9881;</span>
+            </button>
+        </div> -->
     </div>
-
+    <div id="settingsMenu" class="dashboard hidden">
+        <div style="flex-grow:1">
+        </div>
+        <div style="flex-grow:3">
+            <p><button class="listen" onclick="savePreferences('random')">Random</button></p>
+            <p><button class="listen" onclick="savePreferences('dancing-t-rex.gif')">Dancing T-Rex</button></p>
+            <p><button class="listen" onclick="savePreferences('velociraptors.gif')">Velociraptors</button></p>
+            <p><button class="listen" onclick="savePreferences('peppa-george2.gif')">Peppa &amp; George</button></p>
+            <p><button class="listen" onclick="savePreferences('pikachu-dance.gif')">Pikachu</button></p>
+        </div>
+        <!-- <div>
+            <button class="toggleButton" onclick="toggleSettings()">
+                <span>&#9881;</span>
+            </button>
+        </div> -->
+    </div>
+    
     <input type="text" id="userInput" readonly>
     <p id="feedback"></p>
     <div id="virtualKeyboard"></div>   

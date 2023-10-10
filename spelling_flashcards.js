@@ -1,23 +1,157 @@
-let currentWordIndex = 0;
-
-let past_words = {
-    202340: ["high","sigh","right","night","fight","they","he"]
+const all_words = {
+    "202340": ["high","sigh","right","night","fight","they","he"],
+    "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"]
 }
 
-let quizwords = ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"];
+const all_phrases = {
+    "202340":[
+        "I can jump so high.",
+        "She let out a sigh.",
+        "After the stop sign, turn right.",
+        "I love looking at the stars at night.",
+        "I caught the fish, but he put up a big fight.",
+        "They are ready to go to the mall",
+        "He is my father"
+    ],
+    "202341":[
+        "She sailed the boat across the sea.",
+        "Wash your hands with soap and water.",
+        "Wear your coat. It's cold outside.",
+        "The castle was protected by a moat.",
+        "There's no need to moan - we can go to the beach tomorrow instead.",
+        "Would you like some peanut butter on your toast?",
+        "We are the champions.",
+        "She is my sister."
+    ]
+}
 
+const correct_images = [
+    'dancing-t-rex.gif',
+    'velociraptors.gif',
+    'peppa-george2.gif',
+    'pikachu-dance.gif'
+]
+
+function getLatestWeek() {
+    let latestWeek = Math.max(...Object.keys(all_words).map(x=>parseInt(x))).toString();
+
+    return latestWeek;
+}
+
+function getWeekNumberFromUrl() {
+    // Assuming the URL is something like "http://spellingbury.netapp.com/?week=202341"
+  
+    // Use window.location.search to get the query string from the current page URL
+    const queryString = window.location.search;
+    
+    // Use URLSearchParams to parse the query string
+    const urlParams = new URLSearchParams(queryString);
+  
+    // Get the week number. If it doesn't exist, this will be null
+    const weekNumber = urlParams.get('week');
+  
+    // Optional: Convert the week number from string to integer if it's not null
+    return weekNumber;
+}
+  
+// Use the function
+const _urlWeekNumber = getWeekNumberFromUrl();
+  
+const current_week = (_urlWeekNumber && all_words.hasOwnProperty(_urlWeekNumber)) ? _urlWeekNumber : getLatestWeek();
+
+const quizwords = all_words[current_week];
+
+const phrases = all_phrases[current_week];
+
+let currentWordIndex = 0;
 let currentQuizWord;
 
-function displayAnimal() {
+function randbetween(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function localstorage_get(key) {
+    try {
+        return localStorage.getItem(key);
+    } catch (error) {
+        console.warn("Couldn't read from localStorage");
+        return null;
+    }    
+}
+
+
+function localstorage_set(key,value) {
+    try {
+        return localStorage.setItem(key, value);
+    } catch (error) {
+        console.warn("Couldn't write to localStorage");
+        return null;
+    }    
+}
+
+let audioContext;
+
+try {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+} catch (e) {
+    console.error('Web Audio API is not supported in this browser', e);
+}
+
+function playWrongAnswerSound() {
+    if (!audioContext) return;  // Don't proceed if AudioContext is not available
+
+    const oscillator = audioContext.createOscillator();
+    oscillator.type = 'triangle'; // Type of waveform
+    oscillator.frequency.setValueAtTime(100, audioContext.currentTime); // Start at 440 Hz
+    //oscillator.frequency.exponentialRampToValueAtTime(220, audioContext.currentTime + 0.5); // Descend to 220 Hz in 0.5 seconds
+
+    const gain = audioContext.createGain();
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    gain.gain.setValueAtTime(0.3, audioContext.currentTime); // Adjusted gain value to 0.3 (quieter)
+    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1); // Fade out quicker
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.3); // Stop after 0.5 seconds
+
+    oscillator.connect(audioContext.destination); // Connect the oscillator to the speakers
+}
+
+function playCorrectAnswerSound() {
+    if (!audioContext) return;  // Don't proceed if AudioContext is not available
+
+    // Create a series of oscillators to simulate multiple coin clinks
+    for (let i = 0; i < 2; i++) {
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+
+        // Play with these frequencies to get the desired sound
+        oscillator.frequency.setValueAtTime(1000 + i * 300, audioContext.currentTime + i * 0.1); 
+
+        const gain = audioContext.createGain();
+        oscillator.connect(gain);
+        gain.connect(audioContext.destination);
+        gain.gain.setValueAtTime(0.2, audioContext.currentTime + i * 0.1); // Adjusted gain value to 0.5 (half volume)
+        gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + i * 0.1 + 0.5);
+
+        oscillator.start(audioContext.currentTime + i * 0.1);
+        oscillator.stop(audioContext.currentTime + i * 0.1 + 0.5);
+    }
+}
+
+
+
+function displayCard() {
     if (currentWordIndex >= quizwords.length) {
         currentWordIndex = 0;  // Reset if we've gone through all the quizwords
     }
     
     currentQuizWord = quizwords[currentWordIndex];
-    let wordDisplay = document.getElementById("animalWord");
+    let wordDisplay = document.getElementById("cardWord");
     wordDisplay.textContent = currentQuizWord;
     
-    //document.getElementById("currentWordNumber").textContent = currentWordIndex + 1;
+
     //Refresh word list
     displayWordList();
 }
@@ -25,7 +159,9 @@ function displayAnimal() {
 function displayNext() {
     currentWordIndex+=1;
     document.getElementById("userInput").value="";
-    displayAnimal();
+    displayCard();
+    peekAtCard(2000);
+    speakWord("en-US");
 }
 
 function displayWordList() {
@@ -54,13 +190,24 @@ function obscureWord(word, index) {
 function checkAnswer() {
     let userInput = document.getElementById("userInput").value.toLowerCase();
     if (userInput === currentQuizWord) {
+        // Set the image to be shown
+        loadPreferences();
+
         // Correct answer feedback
-        document.getElementById("feedback").textContent = "Correct! Well done!";
+        //document.getElementById("feedback").textContent = "Correct! Well done!";
         
         // Play trumpet sound
         let audio = new Audio('trumpet.mp3');
         audio.play();
         
+        // Show the chosen image
+        document.getElementById('answer-correct-img').style.display = 'block';
+        
+        // Hide the image after a short while (e.g., 3 seconds)
+        setTimeout(() => {
+            document.getElementById('answer-correct-img').style.display = 'none';
+        }, 3000);
+ 
         // Throw confetti
         confetti({
             particleCount: 100,
@@ -71,7 +218,7 @@ function checkAnswer() {
         
         setTimeout(displayNext, 3000); // Show new animal after 3 seconds to let the user enjoy the celebration.
     } else {
-        document.getElementById("feedback").textContent = "Keep trying!";
+        //document.getElementById("feedback").textContent = "Keep trying!";
     }
 }
 
@@ -84,10 +231,12 @@ function updateInputValue(char) {
     // If the character in the target word at the next position matches the clicked key
     if (currentQuizWord[nextPosition] === char) {
         document.getElementById("userInput").value += char;
-        document.getElementById("feedback").textContent = ""; // Reset feedback.
+        //document.getElementById("feedback").textContent = ""; // Reset feedback.
+        playCorrectAnswerSound();
     } else {
         document.getElementById("userInput").value += char;
-        document.getElementById("feedback").textContent = "Incorrect! Try again.";
+        playWrongAnswerSound();
+        //document.getElementById("feedback").textContent = "Incorrect! Try again.";
     }
 
     highlightCorrectness();
@@ -106,11 +255,14 @@ function highlightCorrectness() {
     }
 }
 
-function speakWord() {
+function speakWord(lang = "en-US") {
     if ('speechSynthesis' in window) {
-        let utterance = new SpeechSynthesisUtterance(currentQuizWord);
-        utterance.lang="en-US";
-        window.speechSynthesis.speak(utterance);
+        let utterance_word = new SpeechSynthesisUtterance(currentQuizWord);
+        let utterance_phrase = new SpeechSynthesisUtterance(phrases[currentWordIndex]);
+        utterance_word.lang = lang;
+        utterance_phrase.lang = lang;
+        window.speechSynthesis.speak(utterance_word);
+        setTimeout(()=>window.speechSynthesis.speak(utterance_phrase),1000);
     } else {
         alert("Your browser does not support speech synthesis. Try using a modern browser like Chrome or Firefox.");
     }
@@ -159,15 +311,86 @@ function createVirtualKeyboard() {
     backspaceButton.classList.add("backspace");
 }
 
-/*createVirtualKeyboard();
-displayAnimal();*/
+/* Settings drawer */
+function closeSettings() {
+    const settingsMenu = document.getElementById('settingsMenu');
+    const dashboard = document.getElementById('dashboard');
 
+    // Hide settings
+    settingsMenu.classList.add('hidden');
+    
+    // Show dashboard
+    if (dashboard.classList.contains('hidden')) {
+        dashboard.classList.remove('hidden');
+    }
+}
 
+function toggleSettings() {
+    const settingsMenu = document.getElementById('settingsMenu');
+    const dashboard = document.getElementById('dashboard');
+
+    if (settingsMenu.classList.contains('hidden')) {
+        // Show settings and hide dashboard
+        settingsMenu.classList.remove('hidden');
+        dashboard.classList.add('hidden');
+    } else {
+        // Hide settings and show dashboard
+        closeSettings();
+    }
+}
+
+function savePreferences(correctImg) {
+    localstorage_set('correctImg', correctImg);
+    if (correctImg && (correctImg != "random")) document.getElementById('answer-correct-img').src = correctImg; // Set the image source
+    setTimeout(closeSettings, 100);
+}
+
+function loadPreferences() {
+    let correctImg = localstorage_get('correctImg');
+    if(!correctImg) {
+        // If correct image isn't set in local storage, set the default value of 'random'
+        localstorage_set('correctImg', "random");
+        correctImg = "random";
+    }
+    if (correctImg != "random") {
+        document.getElementById('answer-correct-img').src = correctImg; // Set the image source
+    } else {
+        document.getElementById('answer-correct-img').src=correct_images[randbetween(0,correct_images.length-1)];
+    }
+}
+
+function peekAtCard(duration = 1000) { // duration is the time the card is shown in milliseconds
+    const cardInner = document.querySelector('.card-inner');
+    
+    // If there's no card, there's nothing to peek at
+    if (!cardInner) return;
+  
+    // Define a function to set multiple styles
+    const setTransform = (element, value) => {
+      element.style.webkitTransform = value; // for Safari and older Chrome versions
+      element.style.transform = value; // standard property
+    };
+    
+    // Temporarily show the card
+    setTransform(cardInner, 'rotateY(180deg)'); // This assumes the "revealed" state is rotated 180 degrees on the Y axis
+  
+    // Then, after [duration] milliseconds, hide it again
+    setTimeout(() => {
+      setTransform(cardInner, '');
+    }, duration);
+}
+  
 // Call the above functions after the page has loaded
 window.onload = function() {
     displayWordList();
-    displayAnimal();
-    createVirtualKeyboard();   
+    displayCard();
+    createVirtualKeyboard();
+    loadPreferences();
+    // Pre-load images
+    correct_images.forEach(imagePath => {
+        const img = new Image();
+        img.src = imagePath;
+    });    
 }
 
 document.addEventListener('keydown', function(event) {

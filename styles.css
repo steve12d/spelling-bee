@@ -17,6 +17,7 @@ body {
 h2 {
     font-size: 2rem;
     color: #333;
+    margin-bottom:8px;
 }
 
 
@@ -25,17 +26,18 @@ h2 {
     flex-wrap: nowrap;
     justify-content: center;
     vertical-align: middle;
-    padding: 5px;
+    padding: 3px;
     max-width: 500px;
     margin: 0 auto;
 }
 
-#dashboard {
+.dashboard {
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     vertical-align: middle;
-    padding: 5px;
+    padding: 3px;
+    min-height: 220px;
     max-width: 500px;
     margin: 0 auto;
 
@@ -45,7 +47,7 @@ h2 {
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-#dashboard div {
+.dashboard div {
     /*width: 100%;*/
     margin-top: 5px;
     margin-bottom: 5px;
@@ -117,6 +119,7 @@ h2 {
 
     h2 {
         font-size: 1.5rem;
+        margin-bottom:3px;
     }
 
     #userInput {
@@ -234,7 +237,87 @@ ul#wordList li {
     background: white;
     border: 2px solid white;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
     
     /*background: lightpink;*/
+}
+.phrase {
+    font-size: smaller;
+}
+
+#preferences {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+#answer-correct-img {
+    display: none;
+    width: 200px;  /* or any preferred size */
+    height: auto;
+    position: absolute;
+    bottom: 5%;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%); /* Center the dinosaur horizontally */
+    z-index: 1000; /* Make sure it appears above other content */
+}
+
+.toggleButton {
+    border:none;
+}
+
+/* Select box */
+select {
+    font-size: 16px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+}
+
+select:hover {
+    background-color: #f0f0f0;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007BFF; /* Adjust to match the color scheme of your site */
+}
+select {
+    appearance: none; /* Remove default appearance */
+    -webkit-appearance: none; /* Safari and Chrome */
+    -moz-appearance: none; /* Firefox */
+    background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 12 6" fill="#999" xmlns="http://www.w3.org/2000/svg"><path d="M1.4 0.6l4.6 4.6 4.6-4.6 1.4 1.4-6 6-6-6z"></path></svg>');
+    background-repeat: no-repeat;
+    background-position: 95% center;
+}
+option {
+    padding: 8px 10px;
+    background-color: #f9f9f9;
+}
+
+option:hover, option:focus {
+    background-color: #e0e0e0;
+}
+
+/* Settings menu */
+.hidden {
+    display: none;
+}
+
+settingsMenu {
+    position: absolute; 
+    top: 10%; 
+    left: 10%;
+ /*   width: 80%; 
+    height: 80%; */
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000; 
 }
