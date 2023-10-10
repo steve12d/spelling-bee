@@ -1,32 +1,51 @@
-let currentWordIndex = 0;
+const all_words = {
+    "202340": ["high","sigh","right","night","fight","they","he"],
+    "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"]
+}
 
-let quizwords = [
-    "high",
-    "sigh",
-    "right",
-    "night",
-    "fight",
-    "they",
-    "he"
-];
-let phrases = [
-    "I can jump so high.",
-    "She let out a sigh.",
-    "After the stop sign, turn right.",
-    "I love looking at the stars at night.",
-    "I caught the fish, but he put up a big fight.",
-    "They are ready to go to the mall",
-    "He is my father"
-]
+const all_phrases = {
+    "202340":[
+        "I can jump so high.",
+        "She let out a sigh.",
+        "After the stop sign, turn right.",
+        "I love looking at the stars at night.",
+        "I caught the fish, but he put up a big fight.",
+        "They are ready to go to the mall",
+        "He is my father"
+    ],
+    "202341":[
+        "She sailed the boat across the sea.",
+        "Wash your hands with soap and water.",
+        "Wear your coat. It's cold outside.",
+        "The castle was protected by a moat.",
+        "There's no need to moan - we can go to the beach tomorrow instead.",
+        "Would you like some peanut butter on your toast?",
+        "We are the champions.",
+        "She is my sister."
+    ]
+}
 
-let currentQuizWord;
-
-let correct_images = [
+const correct_images = [
     'dancing-t-rex.gif',
     'velociraptors.gif',
     'peppa-george2.gif',
     'pikachu-dance.gif'
 ]
+
+function getLatestWeek() {
+    let latestWeek = Math.max(...Object.keys(all_words).map(x=>parseInt(x))).toString();
+
+    return latestWeek;
+}
+
+const current_week = getLatestWeek();
+
+const quizwords = all_words[current_week];
+
+const phrases = all_phrases[current_week];
+
+let currentWordIndex = 0;
+let currentQuizWord;
 
 function randbetween(min, max) { // min and max included 
     return Math.floor(Math.random() * (max - min + 1) + min)
@@ -112,12 +131,8 @@ function displayCard() {
     currentQuizWord = quizwords[currentWordIndex];
     let wordDisplay = document.getElementById("cardWord");
     wordDisplay.textContent = currentQuizWord;
-    /*wordDisplay.innerHTML = `
-        <p>${currentQuizWord}</p>
-        <p class="phrase">${phrases[currentWordIndex]}</p>
-    `;*/
     
-    //document.getElementById("currentWordNumber").textContent = currentWordIndex + 1;
+
     //Refresh word list
     displayWordList();
 }
@@ -126,6 +141,7 @@ function displayNext() {
     currentWordIndex+=1;
     document.getElementById("userInput").value="";
     displayCard();
+    peekAtCard(2000);
     speakWord("en-US");
 }
 
@@ -137,6 +153,7 @@ function displayWordList() {
         let listItem = document.createElement("li");
         if(index==currentWordIndex) listItem.classList.add("currentWord");
         listItem.textContent = obscureWord(animal, index);
+        listItem.setAttribute('title', animal);
         wordListElement.appendChild(listItem);
     });
 
@@ -323,6 +340,27 @@ function loadPreferences() {
     }
 }
 
+function peekAtCard(duration = 1000) { // duration is the time the card is shown in milliseconds
+    const cardInner = document.querySelector('.card-inner');
+    
+    // If there's no card, there's nothing to peek at
+    if (!cardInner) return;
+  
+    // Define a function to set multiple styles
+    const setTransform = (element, value) => {
+      element.style.webkitTransform = value; // for Safari and older Chrome versions
+      element.style.transform = value; // standard property
+    };
+    
+    // Temporarily show the card
+    setTransform(cardInner, 'rotateY(180deg)'); // This assumes the "revealed" state is rotated 180 degrees on the Y axis
+  
+    // Then, after [duration] milliseconds, hide it again
+    setTimeout(() => {
+      setTransform(cardInner, '');
+    }, duration);
+}
+  
 // Call the above functions after the page has loaded
 window.onload = function() {
     displayWordList();
@@ -336,3 +374,14 @@ window.onload = function() {
     });    
 }
 
+document.addEventListener('keydown', function(event) {
+    const keyPressed = event.key.toLowerCase();
+
+    // If the key pressed is a letter
+    if (keyPressed === 'backspace') {
+        // If the Backspace key is pressed, remove the last letter
+        applyBackspace();
+    } else if (keyPressed >= 'a' && keyPressed <= 'z') {
+            updateInputValue(keyPressed);
+    }
+});

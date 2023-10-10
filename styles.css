@@ -172,6 +172,7 @@ button.listen:active {
 .flashcard {
     width: 200px;
     height: 120px;
+    -webkit-perspective: 1000px;
     perspective: 1000px;
     margin: 20px auto;
     cursor: pointer;
@@ -181,11 +182,14 @@ button.listen:active {
     position: relative;
     width: 100%;
     height: 100%;
+    -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    -webkit-transition: transform 0.5s;
     transition: transform 0.5s;
 }
 
 .flashcard:hover .card-inner {
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
 
@@ -193,6 +197,7 @@ button.listen:active {
     position: absolute;
     width: 100%;
     height: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     display: flex;
     align-items: center;
@@ -210,10 +215,12 @@ button.listen:active {
 
 .card-back {
     background-color: white;
+    -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     font-size: 1.2rem;
     color: #333;
 }
+
 
 /* Word List Styles */
 ul#wordList {
@@ -250,7 +257,8 @@ ul#wordList li {
     width: 200px;  /* or any preferred size */
     height: auto;
     position: absolute;
-    bottom: 10%;
+    bottom: 5%;
+    bottom: 0px;
     left: 50%;
     transform: translateX(-50%); /* Center the dinosaur horizontally */
     z-index: 1000; /* Make sure it appears above other content */
