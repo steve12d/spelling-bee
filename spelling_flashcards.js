@@ -38,7 +38,26 @@ function getLatestWeek() {
     return latestWeek;
 }
 
-const current_week = getLatestWeek();
+function getWeekNumberFromUrl() {
+    // Assuming the URL is something like "http://spellingbury.netapp.com/?week=202341"
+  
+    // Use window.location.search to get the query string from the current page URL
+    const queryString = window.location.search;
+    
+    // Use URLSearchParams to parse the query string
+    const urlParams = new URLSearchParams(queryString);
+  
+    // Get the week number. If it doesn't exist, this will be null
+    const weekNumber = urlParams.get('week');
+  
+    // Optional: Convert the week number from string to integer if it's not null
+    return weekNumber;
+}
+  
+// Use the function
+const _urlWeekNumber = getWeekNumberFromUrl();
+  
+const current_week = (_urlWeekNumber && all_words.hasOwnProperty(_urlWeekNumber)) ? _urlWeekNumber : getLatestWeek();
 
 const quizwords = all_words[current_week];
 
