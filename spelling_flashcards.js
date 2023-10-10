@@ -21,18 +21,101 @@ let phrases = [
 
 let currentQuizWord;
 
+let correct_images = [
+    'dancing-t-rex.gif',
+    'velociraptors.gif',
+    'peppa-george2.gif',
+    'pikachu-dance.gif'
+]
+
+function randbetween(min, max) { // min and max included 
+    return Math.floor(Math.random() * (max - min + 1) + min)
+}
+
+function localstorage_get(key) {
+    try {
+        return localStorage.getItem(key);
+    } catch (error) {
+        console.warn("Couldn't read from localStorage");
+        return null;
+    }    
+}
+
+
+function localstorage_set(key,value) {
+    try {
+        return localStorage.setItem(key, value);
+    } catch (error) {
+        console.warn("Couldn't write to localStorage");
+        return null;
+    }    
+}
+
+let audioContext;
+
+try {
+    audioContext = new (window.AudioContext || window.webkitAudioContext)();
+} catch (e) {
+    console.error('Web Audio API is not supported in this browser', e);
+}
+
+function playWrongAnswerSound() {
+    if (!audioContext) return;  // Don't proceed if AudioContext is not available
+
+    const oscillator = audioContext.createOscillator();
+    oscillator.type = 'triangle'; // Type of waveform
+    oscillator.frequency.setValueAtTime(100, audioContext.currentTime); // Start at 440 Hz
+    //oscillator.frequency.exponentialRampToValueAtTime(220, audioContext.currentTime + 0.5); // Descend to 220 Hz in 0.5 seconds
+
+    const gain = audioContext.createGain();
+    oscillator.connect(gain);
+    gain.connect(audioContext.destination);
+
+    gain.gain.setValueAtTime(0.3, audioContext.currentTime); // Adjusted gain value to 0.3 (quieter)
+    gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1); // Fade out quicker
+
+    oscillator.start();
+    oscillator.stop(audioContext.currentTime + 0.3); // Stop after 0.5 seconds
+
+    oscillator.connect(audioContext.destination); // Connect the oscillator to the speakers
+}
+
+function playCorrectAnswerSound() {
+    if (!audioContext) return;  // Don't proceed if AudioContext is not available
+
+    // Create a series of oscillators to simulate multiple coin clinks
+    for (let i = 0; i < 2; i++) {
+        const oscillator = audioContext.createOscillator();
+        oscillator.type = 'sine';
+
+        // Play with these frequencies to get the desired sound
+        oscillator.frequency.setValueAtTime(1000 + i * 300, audioContext.currentTime + i * 0.1); 
+
+        const gain = audioContext.createGain();
+        oscillator.connect(gain);
+        gain.connect(audioContext.destination);
+        gain.gain.setValueAtTime(0.2, audioContext.currentTime + i * 0.1); // Adjusted gain value to 0.5 (half volume)
+        gain.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + i * 0.1 + 0.5);
+
+        oscillator.start(audioContext.currentTime + i * 0.1);
+        oscillator.stop(audioContext.currentTime + i * 0.1 + 0.5);
+    }
+}
+
+
+
 function displayCard() {
     if (currentWordIndex >= quizwords.length) {
         currentWordIndex = 0;  // Reset if we've gone through all the quizwords
     }
     
     currentQuizWord = quizwords[currentWordIndex];
-    let wordDisplay = document.getElementById("animalWord");
-    /*wordDisplay.textContent = currentQuizWord;*/
-    wordDisplay.innerHTML = `
+    let wordDisplay = document.getElementById("cardWord");
+    wordDisplay.textContent = currentQuizWord;
+    /*wordDisplay.innerHTML = `
         <p>${currentQuizWord}</p>
         <p class="phrase">${phrases[currentWordIndex]}</p>
-    `;
+    `;*/
     
     //document.getElementById("currentWordNumber").textContent = currentWordIndex + 1;
     //Refresh word list
@@ -43,6 +126,7 @@ function displayNext() {
     currentWordIndex+=1;
     document.getElementById("userInput").value="";
     displayCard();
+    speakWord("en-US");
 }
 
 function displayWordList() {
@@ -70,8 +154,11 @@ function obscureWord(word, index) {
 function checkAnswer() {
     let userInput = document.getElementById("userInput").value.toLowerCase();
     if (userInput === currentQuizWord) {
+        // Set the image to be shown
+        loadPreferences();
+
         // Correct answer feedback
-        document.getElementById("feedback").textContent = "Correct! Well done!";
+        //document.getElementById("feedback").textContent = "Correct! Well done!";
         
         // Play trumpet sound
         let audio = new Audio('trumpet.mp3');
@@ -92,17 +179,10 @@ function checkAnswer() {
             startVelocity: 40,
             ticks: 200
         });
-
-        // Say "Good job" if username is defined
-        if ('speechSynthesis' in window && document.getElementById('username').value ) {
-            let phrase = new SpeechSynthesisUtterance("Good job, " + document.getElementById('username').value);
-            phrase.lang = "en-US";
-            window.speechSynthesis.speak(phrase);
-        }    
         
         setTimeout(displayNext, 3000); // Show new animal after 3 seconds to let the user enjoy the celebration.
     } else {
-        document.getElementById("feedback").textContent = "Keep trying!";
+        //document.getElementById("feedback").textContent = "Keep trying!";
     }
 }
 
@@ -115,10 +195,12 @@ function updateInputValue(char) {
     // If the character in the target word at the next position matches the clicked key
     if (currentQuizWord[nextPosition] === char) {
         document.getElementById("userInput").value += char;
-        document.getElementById("feedback").textContent = ""; // Reset feedback.
+        //document.getElementById("feedback").textContent = ""; // Reset feedback.
+        playCorrectAnswerSound();
     } else {
         document.getElementById("userInput").value += char;
-        document.getElementById("feedback").textContent = "Incorrect! Try again.";
+        playWrongAnswerSound();
+        //document.getElementById("feedback").textContent = "Incorrect! Try again.";
     }
 
     highlightCorrectness();
@@ -193,36 +275,64 @@ function createVirtualKeyboard() {
     backspaceButton.classList.add("backspace");
 }
 
+/* Settings drawer */
+function closeSettings() {
+    const settingsMenu = document.getElementById('settingsMenu');
+    const dashboard = document.getElementById('dashboard');
 
-function savePreferences() {
-    const username = document.getElementById('username').value;
-    const correctImg = document.getElementById('correctImg').value;
+    // Hide settings
+    settingsMenu.classList.add('hidden');
+    
+    // Show dashboard
+    if (dashboard.classList.contains('hidden')) {
+        dashboard.classList.remove('hidden');
+    }
+}
 
-    localStorage.setItem('username', username);
-    localStorage.setItem('correctImg', correctImg);
+function toggleSettings() {
+    const settingsMenu = document.getElementById('settingsMenu');
+    const dashboard = document.getElementById('dashboard');
+
+    if (settingsMenu.classList.contains('hidden')) {
+        // Show settings and hide dashboard
+        settingsMenu.classList.remove('hidden');
+        dashboard.classList.add('hidden');
+    } else {
+        // Hide settings and show dashboard
+        closeSettings();
+    }
+}
+
+function savePreferences(correctImg) {
+    localstorage_set('correctImg', correctImg);
+    if (correctImg && (correctImg != "random")) document.getElementById('answer-correct-img').src = correctImg; // Set the image source
+    setTimeout(closeSettings, 100);
 }
 
 function loadPreferences() {
-    const username = localStorage.getItem('username');
-    const correctImg = localStorage.getItem('correctImg');
-
-    if (username) {
-        document.getElementById('username').value = username;
+    let correctImg = localstorage_get('correctImg');
+    if(!correctImg) {
+        // If correct image isn't set in local storage, set the default value of 'random'
+        localstorage_set('correctImg', "random");
+        correctImg = "random";
     }
-
-    if (correctImg) {
-        document.getElementById('correctImg').value = correctImg;
+    if (correctImg != "random") {
         document.getElementById('answer-correct-img').src = correctImg; // Set the image source
+    } else {
+        document.getElementById('answer-correct-img').src=correct_images[randbetween(0,correct_images.length-1)];
     }
 }
-
-// Call loadPreferences() when the page loads
-document.addEventListener('DOMContentLoaded', loadPreferences);
-
 
 // Call the above functions after the page has loaded
 window.onload = function() {
     displayWordList();
     displayCard();
     createVirtualKeyboard();
+    loadPreferences();
+    // Pre-load images
+    correct_images.forEach(imagePath => {
+        const img = new Image();
+        img.src = imagePath;
+    });    
 }
+
