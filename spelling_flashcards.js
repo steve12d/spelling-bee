@@ -1,6 +1,7 @@
 const all_words = {
     "202340": ["high","sigh","right","night","fight","they","he"],
-    "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"]
+    "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"],
+    "202342": ["hook", "good", "look", "soon", "food", "spoon", "all", "are"]
 }
 
 const all_phrases = {
@@ -22,6 +23,16 @@ const all_phrases = {
         "Would you like some peanut butter on your toast?",
         "We are the champions.",
         "She is my sister."
+    ],
+    "202342":[
+        "Please hang your coat on the hook.",
+        "You did such a good job.",
+        "Look, it's snowing outside.",
+        "Soon it will be Halloween.",
+        "Pizza is my favorite food.",
+        "Would you like a spoon for your yogurt?",
+        "Not all dinosaurs were carnivores.",
+        "You are such a good friend."
     ]
 }
 
