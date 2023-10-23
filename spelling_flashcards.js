@@ -1,7 +1,9 @@
 const all_words = {
     "202340": ["high","sigh","right","night","fight","they","he"],
     "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"],
-    "202342": ["hook", "good", "look", "soon", "food", "spoon", "all", "are"]
+    "202342": ["hook", "good", "look", "soon", "food", "spoon", "all", "are"],
+    "202343": ["arm", "dark", "farm", "star", "shark", "start", "march", "spark", "me", "my"]
+
 }
 
 const all_phrases = {
@@ -33,6 +35,18 @@ const all_phrases = {
         "Would you like a spoon for your yogurt?",
         "Not all dinosaurs were carnivores.",
         "You are such a good friend."
+    ],
+    "202343": [
+        "She raised her arm to wave hello.",
+        "It is dark at night.",
+        "The pig lives on a farm.",
+        "I see a bright star in the sky.",
+        "The shark swims fast in the sea.",
+        "Start the race by saying 'Go!'",
+        "The drummers march in the marching band.",
+        "A tiny spark can light a big fire.",
+        "Look at me! I can ride this bike.",
+        "My dad will pick me up from school today."
     ]
 }
 
