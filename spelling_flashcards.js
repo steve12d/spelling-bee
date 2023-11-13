@@ -3,7 +3,8 @@ const all_words = {
     "202341": ["boat", "soap", "coat", "moat", "moan", "toast", "we", "she"],
     "202342": ["hook", "good", "look", "soon", "food", "spoon", "all", "are"],
     "202343": ["arm", "dark", "farm", "star", "shark", "start", "march", "spark", "me", "my"],
-    "202345": ["torn","fork", "corn", "forty", "story", "stormy", "lord", "pork", "be", "was"]
+    "202345": ["torn","fork", "corn", "forty", "story", "stormy", "lord", "pork", "be", "was"],
+    "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"]
 }
 
 const all_phrases = {
@@ -59,7 +60,19 @@ const all_phrases = {
         "We had pork chops for lunch.",
         "I want to be a firefighter.",
         "The cat was sleeping on the chair."
-      ]      
+      ],
+    "202346": [
+        "Don't touch the candle; it can burn you.",
+        "Turn the page to read the next story.",
+        "The cat has soft fur.",
+        "I hurt my knee when I fell down.",
+        "We saw a turkey on the farm.",
+        "The nurse helps us when we are sick.",
+        "My favorite color is purple.",
+        "The turtle moves very slowly.",
+        "I like apples and bananas.",
+        "The sun is shining brightly today."
+    ]
 }
 
 const correct_images = [
