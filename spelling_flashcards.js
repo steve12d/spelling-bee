@@ -4,7 +4,8 @@ const all_words = {
     "202342": ["hook", "good", "look", "soon", "food", "spoon", "all", "are"],
     "202343": ["arm", "dark", "farm", "star", "shark", "start", "march", "spark", "me", "my"],
     "202345": ["torn","fork", "corn", "forty", "story", "stormy", "lord", "pork", "be", "was"],
-    "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"]
+    "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"],
+    "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"]
 }
 
 const all_phrases = {
@@ -72,7 +73,17 @@ const all_phrases = {
         "The turtle moves very slowly.",
         "I like apples and bananas.",
         "The sun is shining brightly today."
-    ]
+    ],
+    "202347": [
+        "Now we can play a game together.",
+        "The cow in the field is black and white.",
+        "An owl says 'hoot' at night.",
+        "My favorite color is brown like chocolate.",
+        "The clown at the party made funny faces.",
+        "I saw a pretty flower in the garden.",
+        "That is my favorite teddy bear.",
+        "I like to draw with my colorful crayons."
+    ]    
 }
 
 const correct_images = [
