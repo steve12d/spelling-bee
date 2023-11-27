@@ -475,6 +475,10 @@ document.addEventListener('keydown', function(event) {
     if (keyPressed === 'backspace') {
         // If the Backspace key is pressed, remove the last letter
         applyBackspace();
+    
+    } else if (keyPressed.length > 1) {
+        event.preventDefault();
+        
     } else if (keyPressed >= 'a' && keyPressed <= 'z') {
             updateInputValue(keyPressed);
     }
