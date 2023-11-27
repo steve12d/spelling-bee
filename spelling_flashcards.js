@@ -5,7 +5,8 @@ const all_words = {
     "202343": ["arm", "dark", "farm", "star", "shark", "start", "march", "spark", "me", "my"],
     "202345": ["torn","fork", "corn", "forty", "story", "stormy", "lord", "pork", "be", "was"],
     "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"],
-    "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"]
+    "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"],
+    "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"]
 }
 
 const all_phrases = {
@@ -83,8 +84,21 @@ const all_phrases = {
         "I saw a pretty flower in the garden.",
         "That is my favorite teddy bear.",
         "I like to draw with my colorful crayons."
-    ]    
+    ],
+    "202348": [
+        "I found a shiny coin on the sidewalk.",
+        "Mom is going to boil some water to make yummy pasta.",
+        "Would you like to join me in playing with colorful blocks?",
+        "Can you point to the big, red balloon in the sky?",
+        "Use your happy voice when you tell me your favorite story.",
+        "Remember to flush the toilet after using it, and wash your hands too!",
+        "Plants grow in the dark, rich soil in our garden.",
+        "Let's wrap our sandwiches in shiny foil to keep them fresh.",
+        "She said, 'I love playing with my best friend.'",
+        "I like the taste of yummy ice cream on a hot day."
+    ]
 }
+
 
 const correct_images = [
     'dancing-t-rex.gif',
