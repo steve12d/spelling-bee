@@ -6,7 +6,8 @@ const all_words = {
     "202345": ["torn","fork", "corn", "forty", "story", "stormy", "lord", "pork", "be", "was"],
     "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"],
     "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"],
-    "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"]
+    "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"],
+    "202350": ["ever", "river", "never", "braver", "summer", "sister", "brother", "faster", "do", "come"]
 }
 
 const all_phrases = {
@@ -96,6 +97,18 @@ const all_phrases = {
         "Let's wrap our sandwiches in shiny foil to keep them fresh.",
         "She said, 'I love playing with my best friend.'",
         "I like the taste of yummy ice cream on a hot day."
+    ],
+    "202350": [
+        "I will love my teddy bear forever and ever.",
+        "The river flows gently through the forest.",
+        "I will never forget to brush my teeth.",
+        "Each day I try to be braver than the day before.",
+        "In the summer, we go to the beach and build sandcastles.",
+        "My sister and I like to play hide-and-seek together.",
+        "My brother helps me fly my kite in the park.",
+        "I run faster when I'm racing with my friends.",
+        "I like to do my homework after school.",
+        "Come to the kitchen, dinner is ready!"
     ]
 }
 
