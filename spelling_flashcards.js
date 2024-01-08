@@ -7,7 +7,8 @@ const all_words = {
     "202346": ["burn", "turn", "fur", "hurt", "turkey", "nurse", "purple", "turtle", "and", "the"],
     "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"],
     "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"],
-    "202350": ["ever", "river", "never", "braver", "summer", "sister", "brother", "faster", "do", "come"]
+    "202350": ["ever", "river", "never", "braver", "summer", "sister", "brother", "faster", "do", "come"],
+    "202402": ["game", "shake", "make", "same", "plane", "brave", "taste", "take", "little", "there"]
 }
 
 const all_phrases = {
@@ -109,7 +110,19 @@ const all_phrases = {
         "I run faster when I'm racing with my friends.",
         "I like to do my homework after school.",
         "Come to the kitchen, dinner is ready!"
-    ]
+    ],
+    "202402":[
+        "Let's play a fun game with our colorful blocks.",
+        "Can you shake the bottle of glitter for our art project?",
+        "We can make a big castle with our playdough.",
+        "My red crayon is the same color as your apple.",
+        "Look at the toy plane fly high in the sky!",
+        "You were very brave when you tried the big slide.",
+        "Let's taste the yummy cookies we baked together.",
+        "Please take your backpack to school every day.",
+        "I saw a little frog jump in the pond.",
+        "There is a rainbow in the sky after the rain."
+      ]      
 }
 
 
