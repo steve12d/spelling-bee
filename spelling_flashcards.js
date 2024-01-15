@@ -8,7 +8,8 @@ const all_words = {
     "202347": ["now", "cow", "owl", "brown", "clown", "flower", "that", "with"],
     "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"],
     "202350": ["ever", "river", "never", "braver", "summer", "sister", "brother", "faster", "do", "come"],
-    "202402": ["game", "shake", "make", "same", "plane", "brave", "taste", "take", "little", "there"]
+    "202402": ["game", "shake", "make", "same", "plane", "brave", "taste", "take", "little", "there"],
+    "202403": ["eve", "even", "evening", "these", "here", "delete", "complete", "out", "have"]
 }
 
 const all_phrases = {
@@ -122,7 +123,18 @@ const all_phrases = {
         "Please take your backpack to school every day.",
         "I saw a little frog jump in the pond.",
         "There is a rainbow in the sky after the rain."
-      ]      
+      ],
+    "202403": [
+        "I will see you on Christmas Eve.",
+        "My sister has an even number of candies.",
+        "We usually take a walk in the evening.",
+        "These flowers are so beautiful.",
+        "Come here and sit next to me.",
+        "Please delete the incorrect word.",
+        "She had to complete her homework before playing.",
+        "The cat went out through the open window.",
+        "I have a blue pen in my pencil case."
+      ]
 }
 
 
