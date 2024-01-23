@@ -9,7 +9,8 @@ const all_words = {
     "202348": ["coin", "boil", "join", "point", "voice", "toilet", "soil", "foil", "said", "like"],
     "202350": ["ever", "river", "never", "braver", "summer", "sister", "brother", "faster", "do", "come"],
     "202402": ["game", "shake", "make", "same", "plane", "brave", "taste", "take", "little", "there"],
-    "202403": ["eve", "even", "evening", "these", "here", "delete", "complete", "out", "have"]
+    "202403": ["eve", "even", "evening", "these", "here", "delete", "complete", "out", "have"],
+    "202404": ["ride", "nine", "bike", "smile", "white", "shine", "prize", "hive", "so", "some"]
 }
 
 const all_phrases = {
@@ -134,7 +135,19 @@ const all_phrases = {
         "She had to complete her homework before playing.",
         "The cat went out through the open window.",
         "I have a blue pen in my pencil case."
-      ]
+      ],
+    "202404": [
+        "I like to ride my bike in the park.",
+        "There are nine flowers in the garden.",
+        "I learned how to ride a bike when I was six.",
+        "She has a big smile on her face.",
+        "The fluffy clouds are white in color.",
+        "The sun will shine brightly today.",
+        "He won a prize for his beautiful drawing.",
+        "We found bees building their hive in the tree.",
+        "I am so excited to go to the park.",
+        "Some of my friends are coming over to play."
+    ]
 }
 
 
