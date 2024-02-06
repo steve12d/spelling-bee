@@ -11,7 +11,8 @@ const all_words = {
     "202402": ["game", "shake", "make", "same", "plane", "brave", "taste", "take", "little", "there"],
     "202403": ["eve", "even", "evening", "these", "here", "delete", "complete", "out", "have"],
     "202404": ["ride", "nine", "bike", "smile", "white", "shine", "prize", "hive", "so", "some"],
-    "202405": ["bone", "nose", "joke", "rope", "stone", "lonely", "spoke", "drove", "one", "were"]
+    "202405": ["bone", "nose", "joke", "rope", "stone", "lonely", "spoke", "drove", "one", "were"],
+    "202406": ["rude", "rule", "ruler", "june", "tube", "cube", "tune", "flute", "when", "what"]
 }
 
 const all_phrases = {
@@ -160,6 +161,18 @@ const all_phrases = {
         "They drove to the park in their car.",
         "I only have one cookie left.",
         "We were late for school this morning."
+      ],
+    "202406": [
+        "He was rude to his little sister.",
+        "Always remember to follow the rule.",
+        "Use a ruler to draw a straight line.",
+        "My birthday is in June.",
+        "She likes to watch videos on YouTube.",
+        "The shape of the dice is a cube.",
+        "Let's sing along to the tune of this song.",
+        "She played a beautiful melody on the flute.",
+        "When will mommy come home from work?",
+        "What is your favorite color?"
       ]
 }
 
