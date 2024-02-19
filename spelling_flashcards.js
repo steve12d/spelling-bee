@@ -12,7 +12,8 @@ const all_words = {
     "202403": ["eve", "even", "evening", "these", "here", "delete", "complete", "out", "have"],
     "202404": ["ride", "nine", "bike", "smile", "white", "shine", "prize", "hive", "so", "some"],
     "202405": ["bone", "nose", "joke", "rope", "stone", "lonely", "spoke", "drove", "one", "were"],
-    "202406": ["rude", "rule", "ruler", "june", "tube", "cube", "tune", "flute", "when", "what"]
+    "202406": ["rude", "rule", "ruler", "june", "tube", "cube", "tune", "flute", "when", "what"],
+    "202408": ["may", "day", "stay", "play", "away", "playtime", "monday", "today", "said", "could"]
 }
 
 const all_phrases = {
@@ -173,7 +174,19 @@ const all_phrases = {
         "She played a beautiful melody on the flute.",
         "When will mommy come home from work?",
         "What is your favorite color?"
-      ]
+      ],
+      "202408": [
+        "May I have a cookie?",
+        "I like playing all day.",
+        "I will stay with my friend.",
+        "Let's play soccer!",
+        "Go away, scary monster!",
+        "It's time for playtime!",
+        "Monday is the first day of the week.",
+        "Today is Friday.",
+        "She said hello to me.",
+        "I could jump really high."
+    ]
 }
 
 
