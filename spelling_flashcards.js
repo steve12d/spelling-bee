@@ -14,7 +14,8 @@ const all_words = {
     "202405": ["bone", "nose", "joke", "rope", "stone", "lonely", "spoke", "drove", "one", "were"],
     "202406": ["rude", "rule", "ruler", "june", "tube", "cube", "tune", "flute", "when", "what"],
     "202408": ["may", "day", "stay", "play", "away", "playtime", "monday", "today", "said", "could"],
-    "202409": ["out", "loud", "round", "our", "cloud", "mouse", "proud", "sound", "their", "people"]
+    "202409": ["out", "loud", "round", "our", "cloud", "mouse", "proud", "sound", "their", "people"],
+    "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"]
 }
 
 const all_phrases = {
@@ -199,7 +200,19 @@ const all_phrases = {
         "I heard a loud sound coming from the kitchen.",
         "Their dog is chasing a squirrel.",
         "People come in all different shapes and sizes."
-    ]
+    ],
+    "202410": [
+        "My dad helps me tie my shoes.",
+        "I love eating cherry pie for dessert.",
+        "It is not nice to tell a lie.",
+        "The flies are buzzing around the trash.",
+        "I need to untie my shoelaces before I can take off my shoes.",
+        "The baby cried when she dropped her toy.",
+        "My mom says telling lies is not okay.",
+        "I tried really hard on my math homework.",
+        "Mr. Johnson is my teacher.",
+        "Mrs. Smith is our neighbor."
+       ]
 }
 
 
@@ -231,7 +244,7 @@ function getWeekNumberFromUrl() {
     // Optional: Convert the week number from string to integer if it's not null
     return weekNumber;
 }
-  
+
 // Use the function
 const _urlWeekNumber = getWeekNumberFromUrl();
   
@@ -367,7 +380,7 @@ function obscureWord(word, index) {
 
 function checkAnswer() {
     let userInput = document.getElementById("userInput").value.toLowerCase();
-    if (userInput === currentQuizWord) {
+    if (userInput === currentQuizWord.toLowerCase()) {
         // Set the image to be shown
         loadPreferences();
 
@@ -407,7 +420,7 @@ function updateInputValue(char) {
     let nextPosition = currentInput.length;
 
     // If the character in the target word at the next position matches the clicked key
-    if (currentQuizWord[nextPosition] === char) {
+    if (currentQuizWord.toLowerCase()[nextPosition] === char) {
         document.getElementById("userInput").value += char;
         //document.getElementById("feedback").textContent = ""; // Reset feedback.
         playCorrectAnswerSound();
@@ -424,7 +437,7 @@ function updateInputValue(char) {
 function highlightCorrectness() {
     let inputField = document.getElementById("userInput");
     let value = inputField.value;
-    let correctPart = currentQuizWord.substring(0, value.length);
+    let correctPart = currentQuizWord.toLowerCase().substring(0, value.length);
 
     if (value === correctPart) {
         inputField.style.color = "green";
