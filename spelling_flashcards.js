@@ -15,7 +15,8 @@ const all_words = {
     "202406": ["rude", "rule", "ruler", "june", "tube", "cube", "tune", "flute", "when", "what"],
     "202408": ["may", "day", "stay", "play", "away", "playtime", "monday", "today", "said", "could"],
     "202409": ["out", "loud", "round", "our", "cloud", "mouse", "proud", "sound", "their", "people"],
-    "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"]
+    "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"],
+    "202411": ["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"]
 }
 
 const all_phrases = {
@@ -212,7 +213,17 @@ const all_phrases = {
         "I tried really hard on my math homework.",
         "Mr. Johnson is my teacher.",
         "Mrs. Smith is our neighbor."
-       ]
+       ],
+    "202411": [
+        "The boy played with his toy.",
+        "She felt joy when she received a new book.",
+        "It can be annoying when people talk during a movie.",
+        "The monster wants to destroy the city.",
+        "We can enjoy a picnic at the park.",
+        "The dog is loyal to its owner.",
+        "The prince lived in a royal palace.",
+        "I asked my mom if I could have some ice cream."
+      ]
 }
 
 
