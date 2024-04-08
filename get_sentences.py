@@ -36,10 +36,16 @@ def get_words(word_list):
 
 if __name__ == "__main__":
     # Get the word list from the first command-line argument
-    test_words = '["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"]'
+    test_words = '["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"]'
     if len(sys.argv) > 1:
         word_list = test_words if sys.argv[1] == "test" else sys.argv[1]
         get_words(word_list)
+        try:
+            with open("sentences.json") as f:
+                sentences = json.load(f)
+            assert len(sentences) == len(json.loads(word_list)), "Incorrect number of sentences was generated"
+        except Exception as e:
+            print("Error: ", e)
     else:
         print(f'Usage: python get_sentences.py "{test_words}"')
 
