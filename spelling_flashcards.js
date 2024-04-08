@@ -16,7 +16,8 @@ const all_words = {
     "202408": ["may", "day", "stay", "play", "away", "playtime", "monday", "today", "said", "could"],
     "202409": ["out", "loud", "round", "our", "cloud", "mouse", "proud", "sound", "their", "people"],
     "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"],
-    "202411": ["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"]
+    "202411": ["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"],
+    "202415": ["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"]
 }
 
 const all_phrases = {
@@ -215,15 +216,29 @@ const all_phrases = {
         "Mrs. Smith is our neighbor."
        ],
     "202411": [
-        "The boy played with his toy.",
-        "She felt joy when she received a new book.",
-        "It can be annoying when people talk during a movie.",
-        "The monster wants to destroy the city.",
-        "We can enjoy a picnic at the park.",
-        "The dog is loyal to its owner.",
-        "The prince lived in a royal palace.",
-        "I asked my mom if I could have some ice cream."
-      ]
+        "Tom is a naughty boy.",
+        "Sara loves playing with her toy.",
+        "The children were filled with joy during the party.",
+        "The loud music began to annoy the neighbors.",
+        "The tornado can destroy houses and trees.",
+        "We all enjoy playing outside in the sun.",
+        "He is a loyal friend who always sticks up for others.",
+        "The royal family lives in the castle.",
+        "He asked his mom for help with his homework.",
+        "I want some cookies for dessert."
+    ],
+    "202415": [
+        "I have a true friend who always plays with me.",
+        "I need a clue to solve this puzzle.",
+        "The sky is a beautiful shade of blue today.",
+        "The firefighters had to rescue the kitten from the tree.",
+        "Don't forget to use glue when crafting.",
+        "We're going to have a barbecue in the backyard.",
+        "Let's continue playing the game.",
+        "Please don't argue with your sister.",
+        "Is that book over there yours?",
+        "Come with me to the park." 
+    ]
 }
 
 
