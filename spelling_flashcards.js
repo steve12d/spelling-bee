@@ -17,7 +17,8 @@ const all_words = {
     "202409": ["out", "loud", "round", "our", "cloud", "mouse", "proud", "sound", "their", "people"],
     "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"],
     "202411": ["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"],
-    "202415": ["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"]
+    "202415": ["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"],
+    "202416": ["saw", "paw", "awful", "draw", "yawn", "strawberry", "claw", "crawl", "little", "out"]
 }
 
 const all_phrases = {
@@ -238,6 +239,18 @@ const all_phrases = {
         "Please don't argue with your sister.",
         "Is that book over there yours?",
         "Come with me to the park." 
+    ],
+    "202416": [
+        "I saw a bird in the tree.",
+        "The cat hurt its paw.",
+        "The food was awful.",
+        "I can draw a picture of a dog.",
+        "I yawn when I'm sleepy.",
+        "I like to eat strawberry ice cream.",
+        "The bear has a sharp claw.",
+        "The baby learned how to crawl.",
+        "I have a little sister.",
+        "Let's go out to play."
     ]
 }
 
