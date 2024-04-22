@@ -18,7 +18,8 @@ const all_words = {
     "202410": ["tie", "pie", "lie", "flies", "untie", "cried", "lies", "tried", "Mr", "Mrs"],
     "202411": ["boy", "toy", "joy", "annoy", "destroy", "enjoy", "loyal", "royal", "asked", "some"],
     "202415": ["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"],
-    "202416": ["saw", "paw", "awful", "draw", "yawn", "strawberry", "claw", "crawl", "little", "out"]
+    "202416": ["saw", "paw", "awful", "draw", "yawn", "strawberry", "claw", "crawl", "little", "out"],
+    "202417": ["first", "skirt", "birthday", "thirsty", "third", "shirt", "girl", "bird", "said", "like"]
 }
 
 const all_phrases = {
@@ -251,6 +252,18 @@ const all_phrases = {
         "The baby learned how to crawl.",
         "I have a little sister.",
         "Let's go out to play."
+    ],
+    "202417": [
+        "First day of school is always exciting!",
+        "I wore my new skirt to the party.",
+        "Today is my birthday, I'm turning 6!",
+        "I feel thirsty after playing outside.",
+        "The third cookie is mine.",
+        "My shirt has a cool design on it.",
+        "The girl is wearing a pretty dress.",
+        "I saw a bird flying in the sky.",
+        "My mom said we can have pizza for dinner.",
+        "I like to play with my toys."
     ]
 }
 
