@@ -20,7 +20,8 @@ const all_words = {
     "202415": ["true", "clue", "blue", "rescue", "glue", "barbecue", "continue", "argue", "there", "come"],
     "202416": ["saw", "paw", "awful", "draw", "yawn", "strawberry", "claw", "crawl", "little", "out"],
     "202417": ["first", "skirt", "birthday", "thirsty", "third", "shirt", "girl", "bird", "said", "like"],
-    "202418": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+    "202418": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+    "202419": ["Where", "whisper", "wheel", "whale", "Who", "What", "When", "Why", "have", "so"]
 }
 
 const all_phrases = {
@@ -274,6 +275,18 @@ const all_phrases = {
         "Friday is the last day of the school week.",
         "I go to the park on Saturday.",
         "My family has a big dinner on Sunday."
+    ],
+    "202419": [
+        "Where is the red ball?",
+        "I will whisper a secret in your ear.",
+        "The wheel on the bus goes round and round.",
+        "The whale swims in the big ocean.",
+        "Who is that girl over there?",
+        "What color is that flower?",
+        "When is your birthday party?",
+        "Why did the cat run away?",
+        "I have a toy car to play with.",
+        "I am so happy to see you."  
     ]
 }
 
