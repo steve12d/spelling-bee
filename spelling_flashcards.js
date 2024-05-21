@@ -22,7 +22,8 @@ const all_words = {
     "202417": ["first", "skirt", "birthday", "thirsty", "third", "shirt", "girl", "bird", "said", "like"],
     "202418": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "202419": ["Where", "whisper", "wheel", "whale", "Who", "What", "When", "Why", "have", "so"],
-    "202420": ["dolphin", "photo", "phone", "trophy", "elephant", "photograph", "alphabet", "headphones", "some", "where"]
+    "202420": ["dolphin", "photo", "phone", "trophy", "elephant", "photograph", "alphabet", "headphones", "some", "where"],
+    "202421": ["toe", "tiptoe", "goes", "foe", "tomatoes", "potatoes", "shoe", "canoe", "what", "could"]
 }
 
 const all_phrases = {
@@ -300,7 +301,19 @@ const all_phrases = {
         "She listens to music on her headphones.",
         "Would you like some juice?",
         "Where are my socks?"
-      ]
+      ],
+    "202421": [
+        "I stubbed my toe on the table.",
+        "I walked on my tiptoe to sneak up on my brother.",
+        "My dog goes for a walk every morning.",
+        "The hero defeated the evil foe.",
+        "We picked tomatoes and potatoes from the garden.",
+        "I like eating french fries with ketchup on my potatoes.",
+        "I need to tie my shoe before we play outside.",
+        "We rowed a canoe in the lake.",
+        "What color is your shirt?",
+        "I could hear the birds chirping in the trees." 
+    ]
 }
 
 

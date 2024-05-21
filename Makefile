@@ -6,7 +6,7 @@ start:
 
 sentences:
 	@echo "Querying ChatGPT and saving sentences to sentences.json..."
-	@./get_sentences.py test
+	@python3 get_sentences.py test
 
 calendar:
 	@echo "Displaying current, previous, and next week numbers and start dates..."
