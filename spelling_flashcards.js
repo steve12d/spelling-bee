@@ -23,7 +23,8 @@ const all_words = {
     "202418": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
     "202419": ["Where", "whisper", "wheel", "whale", "Who", "What", "When", "Why", "have", "so"],
     "202420": ["dolphin", "photo", "phone", "trophy", "elephant", "photograph", "alphabet", "headphones", "some", "where"],
-    "202421": ["toe", "tiptoe", "goes", "foe", "tomatoes", "potatoes", "shoe", "canoe", "what", "could"]
+    "202421": ["toe", "tiptoe", "goes", "foe", "tomatoes", "potatoes", "shoe", "canoe", "what", "could"],
+    "202422": ["August", "astronaut", "haunted", "haunt", "Autumn", "taught", "their", "people"]
 }
 
 const all_phrases = {
@@ -313,6 +314,16 @@ const all_phrases = {
         "We rowed a canoe in the lake.",
         "What color is your shirt?",
         "I could hear the birds chirping in the trees." 
+    ],
+    "202422": [
+        "August is the eighth month of the year.",
+        "The astronaut went to space in a rocket ship.",
+        "The haunted house was spooky and scary.",
+        "Ghosts like to haunt old houses.",
+        "Autumn is my favorite season because of the colorful leaves.",
+        "My teacher taught me how to write my name.",
+        "Their dog is very friendly.",
+        "People come in all shapes and sizes."
     ]
 }
 
