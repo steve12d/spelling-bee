@@ -25,7 +25,8 @@ const all_words = {
     "202420": ["dolphin", "photo", "phone", "trophy", "elephant", "photograph", "alphabet", "headphones", "some", "where"],
     "202421": ["toe", "tiptoe", "goes", "foe", "tomatoes", "potatoes", "shoe", "canoe", "what", "could"],
     "202422": ["August", "astronaut", "haunted", "haunt", "Autumn", "taught", "their", "people"],
-    "202423": ["monkey", "journey", "donkey", "money", "honey", "key", "chimney", "looked", "called"]
+    "202423": ["monkey", "journey", "donkey", "money", "honey", "key", "chimney", "looked", "called"],
+    "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"]
 }
 
 const all_phrases = {
@@ -336,6 +337,18 @@ const all_phrases = {
         "Smoke comes out of the chimney on our house.",
         "I looked for my favorite toy all day.",
         "I called my friend to invite him to my birthday party."
+    ],
+    "202437": [
+        "I saw a big train chugging along the tracks.",
+        "I am afraid of the dark.",
+        "Don't complain about your lunch, eat it.",
+        "I like to shake my toys to make noise.",
+        "The cat tried to escape from the room.",
+        "There was a delay in the start of the race.",
+        "The museum had a display of dinosaur skeletons.",
+        "Today is a great day to go to the park.",
+        "That is a strange looking bug.",
+        "Draw a straight line from the top to the bottom of the page."
     ]
 }
 
