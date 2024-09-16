@@ -26,7 +26,8 @@ const all_words = {
     "202421": ["toe", "tiptoe", "goes", "foe", "tomatoes", "potatoes", "shoe", "canoe", "what", "could"],
     "202422": ["August", "astronaut", "haunted", "haunt", "Autumn", "taught", "their", "people"],
     "202423": ["monkey", "journey", "donkey", "money", "honey", "key", "chimney", "looked", "called"],
-    "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"]
+    "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"],
+    "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"]
 }
 
 const all_phrases = {
@@ -349,6 +350,18 @@ const all_phrases = {
         "Today is a great day to go to the park.",
         "That is a strange looking bug.",
         "Draw a straight line from the top to the bottom of the page."
+    ],
+    "202438": [
+        "I agree with you.",
+        "Can I have some cheese on my sandwich?",
+        "We need to increase our efforts at recycling.",
+        "I hope we can find peace in the world.",
+        "The pig started to squeal when I picked it up.",
+        "I need to complete my homework before I can play.",
+        "That roller coaster was extreme!",
+        "I believe in magic.",
+        "Can I have a piece of your candy?",
+        "Have you heard the news about the recent discoveries?" 
     ]
 }
 
