@@ -27,7 +27,8 @@ const all_words = {
     "202422": ["August", "astronaut", "haunted", "haunt", "Autumn", "taught", "their", "people"],
     "202423": ["monkey", "journey", "donkey", "money", "honey", "key", "chimney", "looked", "called"],
     "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"],
-    "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"]
+    "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"],
+    "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"]
 }
 
 const all_phrases = {
@@ -362,6 +363,18 @@ const all_phrases = {
         "I believe in magic.",
         "Can I have a piece of your candy?",
         "Have you heard the news about the recent discoveries?" 
+    ],
+    "202439": [
+        "I will reply to your message soon.",
+        "Can you describe what the animal looks like?",
+        "My dad will guide me on how to ride a bike.",
+        "Mom said she has a surprise for us.",
+        "Let's go outside and get some exercise!",
+        "We are going on a trip to a tropical island.",
+        "I like riding my bicycle around the neighborhood.",
+        "We can borrow books from the library.",
+        "The loud noise gave me a fright.",
+        "I'm getting taller, my height is increasing."
     ]
 }
 

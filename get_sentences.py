@@ -36,7 +36,7 @@ def get_words(word_list):
 
 if __name__ == "__main__":
     # Get the word list from the first command-line argument
-    test_words = '[agree, cheese, increase, peace, squeal, complete, extreme, believe, piece, recent]'
+    test_words = '[reply, describe, guide, surprise, exercise, island, bicycle, library, fright, height]'
     if len(sys.argv) > 1:
         word_list = test_words if sys.argv[1] == "test" else sys.argv[1]
         get_words(word_list)
