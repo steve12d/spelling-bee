@@ -380,10 +380,10 @@ const all_phrases = {
 
 
 const correct_images = [
-    'dancing-t-rex.gif',
-    'velociraptors.gif',
-    'peppa-george2.gif',
-    'pikachu-dance.gif'
+    'assets/dancing-t-rex.gif',
+    'assets/velociraptors.gif',
+    'assets/peppa-george2.gif',
+    'assets/pikachu-dance.gif'
 ]
 
 function getLatestWeek() {
@@ -551,7 +551,7 @@ function checkAnswer() {
         //document.getElementById("feedback").textContent = "Correct! Well done!";
         
         // Play trumpet sound
-        let audio = new Audio('trumpet.mp3');
+        let audio = new Audio('assets/trumpet.mp3');
         audio.play();
         
         // Show the chosen image

@@ -4,25 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spelling Bee</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta charset="UTF-8">  <!-- Specifies character encoding -->
+    <link rel="stylesheet" href="assets/styles.css">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Makes the site responsive -->
-    <meta name="description" content="A fun spelling game for Canterbury kids! Test your spelling skills with our interactive flashcards.">  <!-- Provides a brief description of the site -->
+    <meta name="description" content="A fun spelling game for Canterbury kids! Test your spelling skills with our interactive flashcards.">
 
     <meta property="og:title" content="Spelling Flashcard Game for Canterbury Kids">
     <meta property="og:description" content="A fun spelling game for Canterbury kids! Test and improve your spelling skills with our interactive flashcards.">
-    <meta property="og:image" content="https://spellingbury.netlify.app/bee200.png"> <!-- Thumbnail image shown when shared on platforms. Replace with the URL to your image. -->
-    <meta property="og:url" content="https://spellingbury.netlify.app/"> <!-- Replace with the URL to your website. -->
+    <meta property="og:image" content="https://spellingbury.netlify.app/assets/bee200.png">
+    <meta property="og:url" content="https://spellingbury.netlify.app/">
     <meta property="og:type" content="website">
 
-    <meta name="twitter:card" content="summary"> <!-- Use 'summary' for smaller image card -->
+    <meta name="twitter:card" content="summary"> <!-- 'summary' for smaller image card -->
     <meta name="twitter:title" content="Spelling Flashcard Game for Canterbury Kids">
     <meta name="twitter:description" content="A fun spelling game for Canterbury kids! Test and improve your spelling skills with our interactive flashcards.">
-    <meta name="twitter:image" content="https://spellingbury.netlify.app/bee200.png"> <!-- Thumbnail image shown when shared on Twitter. Replace with the URL to your image. -->    
+    <meta name="twitter:image" content="https://spellingbury.netlify.app/assets/bee200.png">
+
+    <!-- Standard favicon -->
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+    
+    <!-- PNG icons for different sizes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" sizes="192x192" href="/assets/android-chrome-192x192.png">
+    <link rel="icon" sizes="512x512" href="/assets/android-chrome-512x512.png">
 </head>
 <body onkeydown="event.preventDefault()">
     <div id="header">
-        <img id="header-image" src="bee200.png" width="40" height="40"/>
+        <img id="header-image" src="assets/bee200.png" width="40" height="40"/>
         <h2>Spelling Bee</h2>
     </div>
     
@@ -38,7 +52,7 @@
                 <div class="card-inner">
                     <div class="card-front">
                         <p>Reveal the word!</p>
-                        <img src="dancing-t-rex.gif" id="answer-correct-img" alt="Correct Answer Image" style="display: none;">
+                        <img src="assets/dancing-t-rex.gif" id="answer-correct-img" alt="Correct Answer Image" style="display: none;">
                     </div>
                     <div class="card-back">
                         <p id="cardWord"></p>
@@ -61,10 +75,10 @@
         </div>
         <div style="flex-grow:3">
             <p><button class="listen" onclick="savePreferences('random')">Random</button></p>
-            <p><button class="listen" onclick="savePreferences('dancing-t-rex.gif')">Dancing T-Rex</button></p>
-            <p><button class="listen" onclick="savePreferences('velociraptors.gif')">Velociraptors</button></p>
-            <p><button class="listen" onclick="savePreferences('peppa-george2.gif')">Peppa &amp; George</button></p>
-            <p><button class="listen" onclick="savePreferences('pikachu-dance.gif')">Pikachu</button></p>
+            <p><button class="listen" onclick="savePreferences('assets/dancing-t-rex.gif')">Dancing T-Rex</button></p>
+            <p><button class="listen" onclick="savePreferences('assets/velociraptors.gif')">Velociraptors</button></p>
+            <p><button class="listen" onclick="savePreferences('assets/peppa-george2.gif')">Peppa &amp; George</button></p>
+            <p><button class="listen" onclick="savePreferences('assets/pikachu-dance.gif')">Pikachu</button></p>
         </div>
         <!-- <div>
             <button class="toggleButton" onclick="toggleSettings()">
@@ -77,7 +91,7 @@
     <p id="feedback"></p>
     <div id="virtualKeyboard"></div>   
 
-    <script src="spelling_flashcards.js?w202439"></script>
+    <script src="spelling.js?w202439"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>
 </body>
 </html>

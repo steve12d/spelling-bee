@@ -1,2 +1,5 @@
 .env
 sentences.json
+build/*
+*.egg-info
+words.txt
