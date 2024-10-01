@@ -28,7 +28,8 @@ const all_words = {
     "202423": ["monkey", "journey", "donkey", "money", "honey", "key", "chimney", "looked", "called"],
     "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"],
     "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"],
-    "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"]
+    "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"],
+    "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"]
 }
 
 const all_phrases = {
@@ -375,6 +376,18 @@ const all_phrases = {
         "We can borrow books from the library.",
         "The loud noise gave me a fright.",
         "I'm getting taller, my height is increasing."
+    ],
+    "202440": [
+        "I have a sore throat and need some medicine.",
+        "The frog likes to croak loudly by the pond.",
+        "The treasure is buried below the ground.",
+        "We will go to the zoo tomorrow to see the animals.",
+        "My dad is my hero because he is brave.",
+        "Be careful not to stroke the dog too hard.",
+        "I can call my friend on the phone to chat.",
+        "I like to eat buttered toast for breakfast.",
+        "My favorite food is mashed potatoes.",
+        "I suppose we should go to bed soon." 
     ]
 }
 
