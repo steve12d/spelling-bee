@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
+import sys
 from openai import OpenAI
 from dotenv import load_dotenv
 from http.server import SimpleHTTPRequestHandler, HTTPServer
@@ -100,6 +101,11 @@ def main():
     parser.add_argument('--serve', action='store_true', help="Serve the static website locally.")
     
     args = parser.parse_args()
+
+    # If no arguments are passed, show the help message
+    if len(sys.argv) == 1:
+        parser.print_help()
+        sys.exit(1)
 
     # Handle command logic
     if args.sentences:
