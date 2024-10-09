@@ -29,7 +29,8 @@ const all_words = {
     "202437": ["train", "afraid", "complain", "shake", "escape", "delay", "display", "great", "strange", "straight"],
     "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"],
     "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"],
-    "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"]
+    "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"],
+    "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"]
 }
 
 const all_phrases = {
@@ -388,6 +389,18 @@ const all_phrases = {
         "I like to eat buttered toast for breakfast.",
         "My favorite food is mashed potatoes.",
         "I suppose we should go to bed soon." 
+    ],
+    "202441": [
+        "I will continue coloring my picture.",
+        "The statue in the park is very big.",
+        "Don't be sad, try to cheer up the gloom.",
+        "I lost my tooth and put it under my pillow for the tooth fairy.",
+        "I want to learn how to play the flute.",
+        "It's important to chew your food before swallowing.",
+        "I got a bruise on my knee when I fell down.",
+        "We all work together in a group.",
+        "Let's walk through the forest and see the trees.",
+        "I love to eat fruit for a snack."
     ]
 }
 
