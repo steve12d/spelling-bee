@@ -30,7 +30,8 @@ const all_words = {
     "202438": ["agree", "cheese", "increase", "peace", "squeal", "complete", "extreme", "believe", "piece", "recent"],
     "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"],
     "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"],
-    "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"]
+    "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"],
+    "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"]
 }
 
 const all_phrases = {
@@ -401,6 +402,18 @@ const all_phrases = {
         "We all work together in a group.",
         "Let's walk through the forest and see the trees.",
         "I love to eat fruit for a snack."
+    ],
+    "202442": [
+        "I live in a big house.",
+        "I go to school every day.",
+        "I didn't eat my vegetables.",
+        "I couldn't find my favorite toy.",
+        "I play with my dog in the park.",
+        "I went to the zoo with my family.",
+        "There is a rainbow in the sky.",
+        "Their toys are colorful.",
+        "We should clean up our room.",
+        "He doesn't like broccoli."
     ]
 }
 
@@ -659,7 +672,7 @@ function createVirtualKeyboard() {
     let keyboardContainer = document.getElementById("virtualKeyboard");
     let rows = [
         ['q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p'],
-        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l'],
+        ['a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'l', "'"],  // Apostrophe added to this row
         ['z', 'x', 'c', 'v', 'b', 'n', 'm']
     ];
 
@@ -669,7 +682,6 @@ function createVirtualKeyboard() {
             let keyButton = document.createElement("button");
             keyButton.textContent = char;
             keyButton.onclick = function() {
-                //document.getElementById("userInput").value += char;
                 updateInputValue(char);
             }
             rowDiv.appendChild(keyButton);
@@ -781,10 +793,10 @@ document.addEventListener('keydown', function(event) {
         // If the Backspace key is pressed, remove the last letter
         applyBackspace();
     
-    } else if (keyPressed.length > 1) {
+    } else if (keyPressed.length > 1 && keyPressed !== "'") {
         event.preventDefault();
         
-    } else if (keyPressed >= 'a' && keyPressed <= 'z') {
+    } else if ((keyPressed >= 'a' && keyPressed <= 'z') || keyPressed === "'") {
             updateInputValue(keyPressed);
     }
 });
