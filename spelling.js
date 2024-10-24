@@ -31,7 +31,8 @@ const all_words = {
     "202439": ["reply", "describe", "guide", "surprise", "exercise", "island", "bicycle", "library", "fright", "height"],
     "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"],
     "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"],
-    "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"]
+    "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"],
+    "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"]
 }
 
 const all_phrases = {
@@ -414,6 +415,18 @@ const all_phrases = {
         "Their toys are colorful.",
         "We should clean up our room.",
         "He doesn't like broccoli."
+    ],
+    "202443": [
+        "I accidentally dropped my ice cream on the ground.",
+        "I got into an accident while riding my bike.",
+        "Math can be difficult, but with practice, you can get better.",
+        "My toy seems to disappear whenever my little brother comes around.",
+        "I had a fun experience at the zoo with my family.",
+        "I have an interest in learning about dinosaurs.",
+        "We are studying ancient history in school.",
+        "Let's imagine we are flying in a rocket ship to outer space.",
+        "It is important to always be kind to others.",
+        "We are going to do a science experiment in class today."
     ]
 }
 
