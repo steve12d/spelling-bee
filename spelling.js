@@ -32,7 +32,8 @@ const all_words = {
     "202440": ["throat", "croak", "below", "tomorrow", "hero", "stroke", "phone", "toast", "potatoes", "suppose"],
     "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"],
     "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"],
-    "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"]
+    "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"],
+    "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"]
 }
 
 const all_phrases = {
@@ -427,6 +428,18 @@ const all_phrases = {
         "Let's imagine we are flying in a rocket ship to outer space.",
         "It is important to always be kind to others.",
         "We are going to do a science experiment in class today."
+    ],
+    "202444": [
+        "Let's play in the sand on the ground.",
+        "I can pound on the drum to make music.",
+        "I can count how many apples are in the basket.",
+        "I found a shiny penny on the sidewalk.",
+        "The bird makes a chirping sound.",
+        "The superhero has super power.",
+        "The wolf lets out a loud howl.",
+        "The owl hoots at night.",
+        "The princess lives in a tall tower.",
+        "I picked a beautiful flower from the garden."
     ]
 }
 
