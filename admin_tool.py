@@ -41,6 +41,14 @@ def generate_sentences():
     with open(words_file) as f:
         word_list = f.read()
 
+    # Verbose logging - print words list in JSON format
+    try:
+        print(json.dumps(
+                word_list.split(", ")
+        ))
+    except:
+        pass
+
     num_words = len(word_list.split(","))
         
     prompt = f"Make sample spelling sentences for 6 year-olds for the following words, responding only with the sentences in json list format and excluding the keys (just a list of values): {word_list}"
