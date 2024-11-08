@@ -33,7 +33,8 @@ const all_words = {
     "202441": ["continue", "statue", "gloom", "tooth", "flute", "chew", "bruise", "group", "through", "fruit"],
     "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"],
     "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"],
-    "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"]
+    "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"],
+    "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"]
 }
 
 const all_phrases = {
@@ -440,6 +441,18 @@ const all_phrases = {
         "The owl hoots at night.",
         "The princess lives in a tall tower.",
         "I picked a beautiful flower from the garden."
+    ],
+    "202445": [
+        "I like to color in my coloring book with lots of pages.",
+        "Foxes are clever animals that live in the forest.",
+        "The babies giggled and clapped their hands.",
+        "The armies marched in neat rows on the parade ground.",
+        "Thieves try to steal things from others.",
+        "Children played tag in the park.",
+        "I can wiggle my toes on my feet.",
+        "We saw many different animals at the zoo.",
+        "The drains were clogged with leaves and dirt.",
+        "The chefs cooked delicious meals in the restaurant."
     ]
 }
 
