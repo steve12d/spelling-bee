@@ -34,7 +34,8 @@ const all_words = {
     "202442": ["house", "school", "didn't", "couldn't", "with", "went", "there", "their", "should", "doesn't"],
     "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"],
     "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"],
-    "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"]
+    "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"],
+    "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"]
 }
 
 const all_phrases = {
@@ -453,6 +454,18 @@ const all_phrases = {
         "We saw many different animals at the zoo.",
         "The drains were clogged with leaves and dirt.",
         "The chefs cooked delicious meals in the restaurant."
+    ],
+    "202446": [
+        "She ran quickly to the finish line.",
+        "He spoke rudely to his teacher.",
+        "The puppy barked sweetly at the baby.",
+        "The knight bravely fought the dragon.",
+        "She whispered the secretely to her friend.",
+        "He stomped angrily when he lost the game.",
+        "The cat stretched lazily in the sun.",
+        "The bees buzzed busily around the hive.",
+        "She yawned wearily after a long day at school.",
+        "He tripped clumsily over the rock."
     ]
 }
 
