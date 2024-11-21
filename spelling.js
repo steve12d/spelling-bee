@@ -35,7 +35,8 @@ const all_words = {
     "202443": ["accidentally", "accident", "difficult", "disappear", "experience", "interest", "history", "imagine", "important", "experiment"],
     "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"],
     "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"],
-    "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"]
+    "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"],
+    "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"]
 }
 
 const all_phrases = {
@@ -466,6 +467,18 @@ const all_phrases = {
         "The bees buzzed busily around the hive.",
         "She yawned wearily after a long day at school.",
         "He tripped clumsily over the rock."
+    ],
+    "202447": [
+        "Let's redecorate your room with new curtains and a bedspread.",
+        "The magician will reappear on stage after disappearing behind a curtain.",
+        "Don't forget to reapply sunscreen every two hours at the beach.",
+        "We need to repay the money we borrowed from Grandma.",
+        "The construction crew will rebuild the old barn next week.",
+        "You should rewrite your name neatly on your homework sheet.",
+        "I need to refresh my memory before the spelling test.",
+        "Let's replay that funny video of the baby laughing.",
+        "I will reread my favorite book for the third time.",
+        "Be careful not to reheat your soup for too long in the microwave."
     ]
 }
 
