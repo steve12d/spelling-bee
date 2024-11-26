@@ -36,7 +36,8 @@ const all_words = {
     "202444": ["ground", "pound", "count", "found", "sound", "power", "howl", "owl", "tower", "flower"],
     "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"],
     "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"],
-    "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"]
+    "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"],
+    "202448": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"]
 }
 
 const all_phrases = {
@@ -479,6 +480,16 @@ const all_phrases = {
         "Let's replay that funny video of the baby laughing.",
         "I will reread my favorite book for the third time.",
         "Be careful not to reheat your soup for too long in the microwave."
+    ],
+    "202448": [
+        "Mom said I shouldn't eat too much candy.",
+        "I'm excited to go to the park with my friends.",
+        "I didn't finish my homework yet.",
+        "I couldn't reach the top shelf.",
+        "I'll see you tomorrow at school.",
+        "It's time to brush your teeth before bed.",
+        "I wouldn't eat the broccoli.",
+        "It wasn't raining when I left the house."
     ]
 }
 
