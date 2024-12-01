@@ -37,8 +37,8 @@ const all_words = {
     "202445": ["pages", "foxes", "babies", "armies", "thieves", "children", "feet", "animals", "drains", "chefs"],
     "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"],
     "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"],
-    "202048": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"],
-    "202448": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"]
+    "202448": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"],
+    "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"]
 }
 
 const all_phrases = {
@@ -482,7 +482,7 @@ const all_phrases = {
         "I will reread my favorite book for the third time.",
         "Be careful not to reheat your soup for too long in the microwave."
     ],
-    "202048": [
+    "202448": [
         "Mom said I shouldn't eat too much candy.",
         "I'm excited to go to the park with my friends.",
         "I didn't finish my homework yet.",
@@ -492,7 +492,7 @@ const all_phrases = {
         "I wouldn't eat the broccoli.",
         "It wasn't raining when I left the house."
     ],
-    "202448": [
+    "202449": [
         "I need to take my medicine when I'm sick.",
         "Can you find the particular toy I'm looking for?",
         "Wait just a minute, I'll be right back.",
