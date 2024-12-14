@@ -38,7 +38,8 @@ const all_words = {
     "202446": ["quickly", "rudely", "sweetly", "bravely", "secretly", "angrily", "lazily", "busily", "wearily", "clumsily"],
     "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"],
     "202448": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"],
-    "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"]
+    "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"],
+    "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"]
 }
 
 const all_phrases = {
@@ -503,7 +504,19 @@ const all_phrases = {
         "It's possible to finish your homework before dinner.",
         "I promise to be quiet during the movie.",
         "There are various colors in the rainbow."
-       ]
+       ],
+    "202450": [
+        "I am being kind to my friend by sharing my toys.",
+        "I feel happy when I play outside with my dog.",
+        "The door is locked so we need the key to open it.",
+        "I am certain that I left my backpack in the classroom.",
+        "The teacher will lead the class on a nature walk.",
+        "If you behave in class, you can earn a sticker.",
+        "This is a good place to have a picnic in the park.",
+        "The rabbit will appear in the magic hat during the show.",
+        "I like to eat pizza for dinner.",
+        "It is important to be honest and tell the truth."
+    ]
 }
 
 
