@@ -39,7 +39,8 @@ const all_words = {
     "202447": ["redecorate", "reappear", "reapply", "repay", "rebuild", "rewrite", "refresh", "replay", "reread", "reheat"],
     "202448": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"],
     "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"],
-    "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"]
+    "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"],
+    "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"]
 }
 
 const all_phrases = {
@@ -516,6 +517,18 @@ const all_phrases = {
         "The rabbit will appear in the magic hat during the show.",
         "I like to eat pizza for dinner.",
         "It is important to be honest and tell the truth."
+    ],
+    "202503": [
+        "Mom bought me a new bicycle for my birthday.",
+        "We see our grandparents biannually, which means twice a year.",
+        "Look at his big biceps from working out.",
+        "We get paid biweekly, every two weeks.",
+        "My cousin is bilingual and speaks both English and Spanish.",
+        "I like the bicolour pattern on your dress.",
+        "Grandpa wears bifocals to help him see better.",
+        "The biplane flew low over the field.",
+        "The math teacher taught us how to bisect a line in half.",
+        "A kangaroo is a biped because it walks on two legs."
     ]
 }
 
