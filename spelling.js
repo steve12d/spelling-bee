@@ -40,7 +40,8 @@ const all_words = {
     "202448": ["shouldn't", "I'm", "didn't", "couldn't", "I'll", "it's", "wouldn't", "wasn't"],
     "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"],
     "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"],
-    "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"]
+    "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"],
+    "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"]
 }
 
 const all_phrases = {
@@ -529,6 +530,18 @@ const all_phrases = {
         "The biplane flew low over the field.",
         "The math teacher taught us how to bisect a line in half.",
         "A kangaroo is a biped because it walks on two legs."
+    ],
+    "202504": [
+        "I will get to meet your new puppy next weekend.",
+        "We can all have fun together at the fair.",
+        "I only eat meat on special occasions.",
+        "The main character of the story was a brave knight.",
+        "I can hear the birds chirping outside.",
+        "It might rain later, so don't forget your umbrella.",
+        "The fare for the bus ride is two dollars.",
+        "Come here and sit next to me.",
+        "The queen's reign lasted for many years.",
+        "The lion has a golden mane."  
     ]
 }
 
