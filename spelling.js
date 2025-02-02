@@ -41,7 +41,8 @@ const all_words = {
     "202449": ["medicine", "particular", "minute", "ordinary", "notice", "peculiar", "position", "possible", "promise", "various"],
     "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"],
     "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"],
-    "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"]
+    "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"],
+    "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"]
 }
 
 const all_phrases = {
@@ -542,6 +543,18 @@ const all_phrases = {
         "Come here and sit next to me.",
         "The queen's reign lasted for many years.",
         "The lion has a golden mane."  
+    ],
+    "202505": [
+        "When he caught the big fish, he had to reel in the line carefully.",
+        "That story doesn't sound real; it's too unbelievable!",
+        "The male lion roared loudly in the zoo.",
+        "We need to mail these letters at the post office today.",
+        "She picked a ripe berry from the bush.",
+        "They decided to bury the treasure in the backyard.",
+        "Be careful not to break the glass vase.",
+        "Press the brake to stop the car.",
+        "Let's play ball in the park this afternoon.",
+        "She started to bawl when she dropped her ice cream."
     ]
 }
 
