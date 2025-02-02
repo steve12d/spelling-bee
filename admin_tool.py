@@ -4,6 +4,7 @@ import datetime as dt
 import json
 import os
 from pathlib import Path
+import requests
 import sys
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -24,6 +25,12 @@ def generate_sentences():
         if not (os.getenv("OPENAI_API_KEY") and os.getenv("OPENAI_ORG_ID")):
             print("Unable to read OPENAI_API_KEY and OPENAI_ORG_ID")
             return
+        # Determine which model to use. Default to "gpt-3.5-turbo"
+        # gpt-3.5-turbo, gpt-4o-mini, gpt-4o, etc.
+        available_models = sorted([x['id'] for x in requests.get("https://api.openai.com/v1/models",headers={"Authorization":f"Bearer {os.getenv('OPENAI_API_KEY')}"}).json()['data']])
+        print(available_models)
+        model = os.getenv("OPENAI_MODEL","gpt-4o-mini")
+        print(f"Using OpenAI model {model}")
 
     # Check if words.txt exists
     if not os.path.exists(words_file):
