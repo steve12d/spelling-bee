@@ -42,7 +42,8 @@ const all_words = {
     "202450": ["kind", "happy", "locked", "certain", "lead", "behave", "place", "appear", "like", "honest"],
     "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"],
     "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"],
-    "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"]
+    "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"],
+    "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"]
 }
 
 const all_phrases = {
@@ -555,6 +556,18 @@ const all_phrases = {
         "Press the brake to stop the car.",
         "Let's play ball in the park this afternoon.",
         "She started to bawl when she dropped her ice cream."
+    ],
+    "202506": [
+        "The cat gently purred as I stroked its fur.",
+        "The magician's trick was incredibly amazing!",
+        "She humbly accepted the award on behalf of her team.",
+        "I will probably go to the park if it doesn't rain.",
+        "We simply need to mix the ingredients to make the cake.",
+        "The knight acted nobly to save the village.",
+        "The storm turned the picnic horribly wrong.",
+        "She felt terribly sick after eating too much candy.",
+        "We could possibly see a movie this weekend.",
+        "He sat comfortably in his new armchair."
     ]
 }
 
