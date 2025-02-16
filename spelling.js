@@ -43,7 +43,8 @@ const all_words = {
     "202503": ["bicycle", "biannual", "biceps", "biweekly", "bilingual", "bicolour", "bifocals", "biplane", "bisect", "biped"],
     "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"],
     "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"],
-    "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"]
+    "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"],
+    "202507": ["guide", "island", "exercise", "favourite", "decide", "library", "height", "describe", "arrive", "surprise"]
 }
 
 const all_phrases = {
@@ -568,6 +569,18 @@ const all_phrases = {
         "She felt terribly sick after eating too much candy.",
         "We could possibly see a movie this weekend.",
         "He sat comfortably in his new armchair."
+    ],
+    "202507": [
+        "Follow the guide to find the treasure chest!",
+        "The island is surrounded by water on all sides.",
+        "Let's do some exercise to stay healthy and strong.",
+        "What's your favourite color?",
+        "It's time to decide what game to play next.",
+        "We can borrow books from the library.",
+        "The height of the tree is taller than our house.",
+        "Can you describe what your toy looks like?",
+        "I can't wait for you to arrive at the party!",
+        "I have a surprise for you on your birthday."
     ]
 }
 
