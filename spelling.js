@@ -44,7 +44,8 @@ const all_words = {
     "202504": ["meet", "fair", "meat", "main", "hear", "rain", "fare", "here", "reign", "mane"],
     "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"],
     "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"],
-    "202507": ["guide", "island", "exercise", "favourite", "decide", "library", "height", "describe", "arrive", "surprise"]
+    "202507": ["guide", "island", "exercise", "favourite", "decide", "library", "height", "describe", "arrive", "surprise"],
+    "202508": ["actually", "specifically", "athletically", "occasionally", "basically", "frantically", "eventually", "musically", "accidentally", "dramatically"]
 }
 
 const all_phrases = {
@@ -581,6 +582,18 @@ const all_phrases = {
         "Can you describe what your toy looks like?",
         "I can't wait for you to arrive at the party!",
         "I have a surprise for you on your birthday."
+    ],
+    "202508": [
+        "I actually finished my homework early.",
+        "I specifically asked for a blue cup.",
+        "She runs athletically on the playground.",
+        "We occasionally go to the park on weekends.",
+        "It's basically my favorite color.",
+        "He searched frantically for his lost toy.",
+        "We will eventually go to the beach this summer.",
+        "She sings musically in the school choir.",
+        "I accidentally dropped my ice cream cone.",
+        "The play ended dramatically with a loud bang."
     ]
 }
 
