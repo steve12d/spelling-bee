@@ -45,7 +45,8 @@ const all_words = {
     "202505": ["reel", "real", "male", "mail", "berry", "bury", "break", "brake", "ball", "bawl"],
     "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"],
     "202507": ["guide", "island", "exercise", "favourite", "decide", "library", "height", "describe", "arrive", "surprise"],
-    "202508": ["actually", "specifically", "athletically", "occasionally", "basically", "frantically", "eventually", "musically", "accidentally", "dramatically"]
+    "202508": ["actually", "specifically", "athletically", "occasionally", "basically", "frantically", "eventually", "musically", "accidentally", "dramatically"],
+    "202509": ["ache", "stomach", "chameleon", "chord", "chorus", "echo", "character", "chronic", "chemistry", "scheme"]
 }
 
 const all_phrases = {
@@ -594,6 +595,18 @@ const all_phrases = {
         "She sings musically in the school choir.",
         "I accidentally dropped my ice cream cone.",
         "The play ended dramatically with a loud bang."
+    ],
+    "202509": [
+        "My head hurts and I have an ache.",
+        "I ate too much candy and now my stomach hurts.",
+        "The chameleon changed colors to hide from predators.",
+        "She strummed the guitar chord perfectly.",
+        "We sang together in the chorus at school.",
+        "Her voice echoed off the walls of the cave.",
+        "He is a kind and honest character in the story.",
+        "He has chronic back pain that won't go away.",
+        "She loves learning about chemistry in school.",
+        "They came up with a clever scheme to win the game."
     ]
 }
 
