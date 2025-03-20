@@ -46,7 +46,9 @@ const all_words = {
     "202506": ["gently", "incredibly", "humbly", "probably", "simply", "nobly", "horribly", "terribly", "possibly", "comfortably"],
     "202507": ["guide", "island", "exercise", "favourite", "decide", "library", "height", "describe", "arrive", "surprise"],
     "202508": ["actually", "specifically", "athletically", "occasionally", "basically", "frantically", "eventually", "musically", "accidentally", "dramatically"],
-    "202509": ["ache", "stomach", "chameleon", "chord", "chorus", "echo", "character", "chronic", "chemistry", "scheme"]
+    "202509": ["ache", "stomach", "chameleon", "chord", "chorus", "echo", "character", "chronic", "chemistry", "scheme"],
+    "202511": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "What", "Where", "were"],
+    "202512": ["Egypt", "pyramid", "mystery", "symbol", "mystic", "hymn", "system", "lyric", "typical"]
 }
 
 const all_phrases = {
@@ -607,6 +609,29 @@ const all_phrases = {
         "He has chronic back pain that won't go away.",
         "She loves learning about chemistry in school.",
         "They came up with a clever scheme to win the game."
+    ],
+    "202511": [
+        "I have school on Monday.",
+        "Tomorrow is Tuesday.",
+        "Wednesday is spelled with a 'w-e-d'.",
+        "My birthday is on Thursday.",
+        "Friday is the last day of the school week.",
+        "We can play outside on Saturday.",
+        "I like to relax on Sunday.",
+        "What color is that toy?",
+        "Where is my book?",
+        "We were playing tag in the park."
+    ],
+    "202512": [
+        "I learned about Egypt in school.",
+        "The pyramid is a very big structure.",
+        "The mystery of the missing toy was solved!",
+        "The heart is a symbol of love.",
+        "The mystic told me my fortune.",
+        "We sang a hymn in church.",
+        "The solar system has planets and stars.",
+        "She wrote a beautiful lyric for the song.",
+        "His behavior was typical of a 6 year-old."  
     ]
 }
 
