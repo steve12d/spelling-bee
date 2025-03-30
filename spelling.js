@@ -48,7 +48,8 @@ const all_words = {
     "202508": ["actually", "specifically", "athletically", "occasionally", "basically", "frantically", "eventually", "musically", "accidentally", "dramatically"],
     "202509": ["ache", "stomach", "chameleon", "chord", "chorus", "echo", "character", "chronic", "chemistry", "scheme"],
     "202511": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "What", "Where", "were"],
-    "202512": ["Egypt", "pyramid", "mystery", "symbol", "mystic", "hymn", "system", "lyric", "typical"]
+    "202512": ["Egypt", "pyramid", "mystery", "symbol", "mystic", "hymn", "system", "lyric", "typical"],
+    "202513": ["forgetting", "forgotten", "beginning", "beginner", "committed", "occurred", "occurring", "forbidden", "preferred", "committing"]
 }
 
 const all_phrases = {
@@ -631,8 +632,21 @@ const all_phrases = {
         "We sang a hymn in church.",
         "The solar system has planets and stars.",
         "She wrote a beautiful lyric for the song.",
-        "His behavior was typical of a 6 year-old."  
+        "His behavior was typical of a 6 year-old." 
+    ],
+    "202513": [
+        "I keep forgetting where I put my toys.",
+        "I have forgotten my lunch at home.",
+        "We are at the beginning of the story.",
+        "I am a beginner at riding a bike.",
+        "She is committed to finishing her homework.",
+        "The accident occurred last night.",
+        "It is currently occurring outside.",
+        "It is forbidden to enter that room.",
+        "My preferred color is blue.",
+        "He keeps committing the same mistake."
     ]
+
 }
 
 
