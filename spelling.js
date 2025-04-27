@@ -49,7 +49,9 @@ const all_words = {
     "202509": ["ache", "stomach", "chameleon", "chord", "chorus", "echo", "character", "chronic", "chemistry", "scheme"],
     "202511": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday", "What", "Where", "were"],
     "202512": ["Egypt", "pyramid", "mystery", "symbol", "mystic", "hymn", "system", "lyric", "typical"],
-    "202513": ["forgetting", "forgotten", "beginning", "beginner", "committed", "occurred", "occurring", "forbidden", "preferred", "committing"]
+    "202513": ["forgetting", "forgotten", "beginning", "beginner", "committed", "occurred", "occurring", "forbidden", "preferred", "committing"],
+    "202514": ["gardener", "gardening", "focused", "focusing", "offering", "offered", "benefited", "benefiting", "limited", "limiting"],
+    "202517": ["teacher's", "woman's", "Egypt's", "friend's", "child's", "planet's", "explorer's", "scientist's", "astronaut's", "rainforest's"]
 }
 
 const all_phrases = {
@@ -645,8 +647,31 @@ const all_phrases = {
         "It is forbidden to enter that room.",
         "My preferred color is blue.",
         "He keeps committing the same mistake."
+    ],
+    "202514": [
+        "The gardener planted flowers in the garden.",
+        "We learned about gardening in school today.",
+        "She was very focused on finishing her puzzle.",
+        "I am focusing on my homework right now.",
+        "The store is offering a discount on toys.",
+        "He offered to share his snack with me.",
+        "She benefited from extra tutoring in math.",
+        "We are benefiting from the cooler weather.",
+        "There is limited space on the bus.",
+        "She is limiting her screen time to one hour a day."
+    ],
+    "202517": [
+        "The teacher's red pen ran out of ink.",
+        "The woman's hat blew away in the wind.",
+        "Egypt's pyramids are very old.",
+        "My friend's birthday party is this weekend.",
+        "The child's toy doll is missing an arm.",
+        "The planet's atmosphere is made up of mostly gas.",
+        "The explorer's map led them to hidden treasure.",
+        "The scientist's lab is filled with test tubes and beakers.",
+        "The astronaut's space suit fits perfectly.",
+        "The rainforest's trees are full of colorful birds."
     ]
-
 }
 
 
