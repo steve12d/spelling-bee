@@ -3,7 +3,7 @@ from setuptools import setup
 
 setup(
     name='spellingbee',
-    version='0.1.1',
+    version='0.1.2',
     py_modules=['admin_tool'],
     install_requires=[
         'openai',
