@@ -1,8 +1,16 @@
 const all_words = {
+    "202548": ["curl", "hurt", "burst", "Thursday", "some"],
     "202542": ["wait", "train", "paint", "snail", "one"]
 }
 
 const all_phrases = {
+    "202548": [
+        "I like to curl my hair with a hair curler.",
+        "Ouch! That scrape on my knee hurt.",
+        "The balloon burst when I sat on it.",
+        "We have pizza every Thursday for dinner.",
+        "I want some ice cream for dessert." 
+    ],
     "202542":[
         "I have to wait for my mom to finish shopping.",
         "I love watching the train pass by.",

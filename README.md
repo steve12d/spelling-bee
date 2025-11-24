@@ -28,6 +28,9 @@ This tool helps automate sentence generation using OpenAI, serves the website lo
 
 ## Usage
 
+### Introduce the latest words (manually)
+Introduce the latest words into a comma-separated file called words.txt
+
 ### Generate Sentences
 ```bash
 spellingbee --sentences
